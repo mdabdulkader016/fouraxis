@@ -45,8 +45,10 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="text-[2.5rem] md:text-[3.6rem] lg:text-[4.5rem] font-display font-medium leading-[1.05] tracking-tight text-white relative z-10 mx-auto px-4 shadow-black drop-shadow-md flex flex-col items-center w-full"
       >
-        <span className="text-center block">Make powerful digital solution</span>
-        <span className="italic text-[#0866f1] text-center block" style={{ marginTop: '-0.1em' }}>with us.</span>
+        <span className="text-center block">Make powerful digital</span>
+        <span className="text-center block" style={{ marginTop: '-0.1em' }}>
+          solution <span className="italic text-[rgb(204,255,56)]">with us.</span>
+        </span>
       </motion.h1>
 
       {/* Subtext */}
