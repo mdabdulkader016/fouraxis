@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 15 23 42;
+    --primary: 37 99 235;
+    --primary-hover: 29 78 216;
+    --secondary: 67 56 202;
+    --accent-glow: 56 189 248;
+    --muted: 71 85 105;
+    --card-bg: 255 255 255;
+    --border-color: 15 23 42;
+  }
+
+  .dark {
+    --background: 3 7 18;
+    --foreground: 248 250 252;
+    --primary: 37 99 235;
+    --primary-hover: 59 130 246;
+    --secondary: 79 70 229;
+    --accent-glow: 56 189 248;
+    --muted: 148 163 184;
+    --card-bg: 20 20 20;
+    --border-color: 255 255 255;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    @apply bg-primary/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .glass-card {
+    @apply bg-card/60 dark:bg-card/5 backdrop-blur-xl border border-border/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+  .glass-nav {
+    @apply bg-background/70 backdrop-blur-lg border-b border-border/10;
+  }
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
