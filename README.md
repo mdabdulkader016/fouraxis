@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Syntaxview Website
 
-## Getting Started
+This is the front-end repository for the Syntaxview / Fouraxis project. This is a modern, high-performance web application built using Next.js, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## 📋 Prerequisites
 
+Before you begin, ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (Version 18.17.0 or higher is recommended)
+- [Git](https://git-scm.com/)
+
+## 🚀 Getting Started
+
+Follow these steps to download and run the project locally.
+
+### 1. Clone the repository
+Open your terminal or command prompt and run the following command to download the project files:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/mdabdulkader016/fouraxis.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Navigate into the project directory
+Move into the newly created folder:
+```bash
+cd fouraxis
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Install dependencies
+Install all the required libraries and packages needed to run the project. You can use `npm` (which comes with Node.js):
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the development server
+Start the local development server:
+```bash
+npm run dev
+```
 
-## Learn More
+### 5. View the app
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the website running locally. The page will automatically update as you modify and save files in the `src` directory.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Built With
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is built with a modern tech stack:
+- **[Next.js 14](https://nextjs.org/)** - React framework for production
+- **[React 18](https://react.dev/)** - UI library
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid styling
+- **[Framer Motion](https://www.framer.com/motion/)** - Production-ready animation library for React
+- **[GSAP](https://gsap.com/)** - Professional-grade JavaScript animation library
+- **[Lenis](https://lenis.darkroom.engineering/)** - Smooth scrolling library
+- **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icons
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/src/app` - App router pages, layouts, and global styles
+- `/src/components` - Reusable UI components (Hero, Navbar, Footer, etc.)
+- `/src/lib` - Utility functions
+- `/public` - Static assets like images and SVGs
