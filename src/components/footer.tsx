@@ -1,69 +1,61 @@
 import Link from "next/link";
-import { MessageCircle, Briefcase, Code, Palette } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-border pt-20 pb-10">
+    <footer className="bg-background pt-20 pb-10 border-t border-white/5 relative z-20">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-12 lg:gap-8 mb-16">
           
-          <div className="lg:col-span-5 pr-4">
-            <Link href="/" className="inline-block mb-6">
-              <img src="/logo.png" alt="Syntaxview Logo" className="h-10 w-auto dark:invert-0 invert dark:brightness-100 brightness-0" />
+          <div className="lg:col-span-4 pr-4">
+            <Link href="/" className="flex items-center gap-2 mb-6">
+               <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center">
+                 <Rocket className="w-4 h-4 text-white" />
+               </div>
+               <span className="text-xl font-bold tracking-tight text-white">Syntaxview</span>
             </Link>
-            <p className="text-muted leading-relaxed mb-8 max-w-sm">
-              Syntaxview crafts high-quality digital experiences through web development, app development, UX/UI design, and graphics design — built for brands that want to grow with confidence.
+            <p className="text-white/40 leading-relaxed mb-8 max-w-sm text-sm">
+              Helping businesses build digital products and visual experiences from strategy to execution.
             </p>
-            <div className="flex gap-4">
-              {[MessageCircle, Briefcase, Code, Palette].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-primary hover:border-primary transition-colors">
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
-          <div className="lg:col-span-2 lg:col-start-7">
-            <h4 className="font-bold text-foreground mb-6">Quick Links</h4>
-            <ul className="space-y-4 text-sm font-medium text-muted">
+          <div className="lg:col-span-2 lg:col-start-5">
+            <h4 className="font-bold text-white mb-6 tracking-wide">About</h4>
+            <ul className="space-y-4 text-sm font-medium text-white/50">
               <li><Link href="#services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="#process" className="hover:text-primary transition-colors">Process</Link></li>
-              <li><Link href="#work" className="hover:text-primary transition-colors">Work</Link></li>
-              <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
-              <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="#work" className="hover:text-primary transition-colors">Portfolio</Link></li>
+              <li><Link href="#pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-foreground mb-6">Services</h4>
-            <ul className="space-y-4 text-sm font-medium text-muted">
-              <li><span className="hover:text-primary transition-colors cursor-pointer">Web Development</span></li>
-              <li><span className="hover:text-primary transition-colors cursor-pointer">App Development</span></li>
-              <li><span className="hover:text-primary transition-colors cursor-pointer">UX/UI Design</span></li>
-              <li><span className="hover:text-primary transition-colors cursor-pointer">Graphics Design</span></li>
+            <h4 className="font-bold text-white mb-6 tracking-wide">Follow</h4>
+            <ul className="space-y-4 text-sm font-medium text-white/50">
+              <li><a href="#" className="hover:text-primary transition-colors">Twitter</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">LinkedIn</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Dribbble</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Instagram</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-foreground mb-6">Ready to talk?</h4>
-            <Link 
-              href="#contact"
-              className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg text-sm font-bold hover:bg-card hover:border-primary transition-all w-full"
-            >
-              Start Your Project
-            </Link>
+            <h4 className="font-bold text-white mb-6 tracking-wide">Contact</h4>
+            <ul className="space-y-4 text-sm font-medium text-white/50">
+              <li>hello@syntaxview.com</li>
+              <li>+1 (555) 000-0000</li>
+            </ul>
           </div>
 
         </div>
 
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs font-medium text-muted">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm font-medium text-white/40">
             © 2026 Syntaxview. All rights reserved.
           </p>
-          <div className="text-xs font-medium text-muted flex gap-2">
-            <span>Design-led.</span>
-            <span>Performance-driven.</span>
-            <span>Built to scale.</span>
+          <div className="text-sm font-medium text-white/40 flex gap-4">
+            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

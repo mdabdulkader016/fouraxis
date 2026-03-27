@@ -32,26 +32,25 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-32 relative bg-background">
+    <section id="faq" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 flex flex-col items-center">
+            <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent text-xs font-bold tracking-wide uppercase mb-6"
+           >
+            FAQ
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-display font-bold mb-6"
+            className="text-4xl md:text-5xl font-display font-bold text-white mb-6"
           >
             Frequently Asked Questions
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-muted text-balance mx-auto"
-          >
-            Everything you may want to know before we start building together.
-          </motion.p>
         </div>
 
         <div className="space-y-4">
@@ -62,21 +61,21 @@ export function FaqSection() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className={cn(
-                  "border border-border rounded-2xl overflow-hidden transition-all duration-300",
-                  isOpen ? "bg-card shadow-lg ring-1 ring-primary/20" : "bg-transparent hover:bg-muted/5"
+                  "border rounded-2xl overflow-hidden transition-all duration-300",
+                  isOpen ? "bg-[#110822] border-primary/30" : "bg-transparent border-white/5 hover:bg-white/[0.02]"
                 )}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span className="font-semibold text-lg pr-8">{faq.question}</span>
+                  <span className={cn("font-medium pr-8 transition-colors", isOpen ? "text-white" : "text-white/70")}>{faq.question}</span>
                   <div className={cn(
-                    "flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors",
-                    isOpen ? "border-primary bg-primary/10 text-primary" : "border-border text-muted"
+                    "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow-lg",
+                    isOpen ? "bg-primary text-white" : "bg-white/5 border border-white/10 text-white/50"
                   )}>
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
@@ -91,7 +90,7 @@ export function FaqSection() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-6 pt-0 text-muted leading-relaxed">
+                      <div className="p-6 pt-0 text-white/50 leading-relaxed text-sm">
                         {faq.answer}
                       </div>
                     </motion.div>

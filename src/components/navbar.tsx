@@ -1,119 +1,117 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { ThemeToggle } from "./theme-toggle";
-import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const navLinks = [
+  { name: "Home", href: "#" },
   { name: "Services", href: "#services" },
-  { name: "Process", href: "#process" },
-  { name: "Work", href: "#work" },
-  { name: "About", href: "#about" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Our Work", href: "#work" },
+  { name: "Reviews", href: "#reviews" },
+  { name: "Contact us", href: "#contact" },
 ];
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeItem, setActiveItem] = useState("Home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "glass-nav py-4" : "bg-transparent py-6"
-      )}
-    >
-      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <motion.img 
-            src="/logo.png" 
-            alt="Syntaxview Logo"
-            className="w-auto object-contain dark:invert-0 invert dark:brightness-100 brightness-0"
-            initial={{ height: 48 }}
-            animate={{ height: isScrolled ? 32 : 48 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          />
+    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
+      <div className="bg-[#0a0514]/70 backdrop-blur-2xl border border-white/10 rounded-full pl-6 pr-2 py-2 flex items-center justify-between shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] relative">
+        
+        {/* Logo */}
+        <Link href="/" className="flex items-center z-10 w-1/4">
+          <img src="/Logo.png" alt="Logo" className="h-8 max-w-[120px] object-contain brightness-0 invert" />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <div className="flex items-center gap-6">
+        {/* Links - Centered Absolutely */}
+        <nav className="hidden lg:flex items-center gap-7 absolute left-1/2 -translate-x-1/2">
+          {navLinks.map((link) => {
+            const isActive = activeItem === link.name;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setActiveItem(link.name)}
+                className={`relative text-[13px] transition-colors ${
+                  isActive ? "text-white font-medium" : "text-white/60 hover:text-white"
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <div className="absolute -bottom-[18px] left-0 right-0 h-[2px] bg-white/50 rounded-full" />
+                )}
+              </Link>
+            )
+          })}
+        </nav>
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-2 z-10 justify-end w-1/4">
+          
+          {/* WhatsApp Icon Button */}
+          <Link 
+            href="#whatsapp" 
+            className="w-10 h-10 rounded-full border border-white bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors hidden md:flex shrink-0"
+          >
+            <svg 
+              className="w-4 h-4 text-white" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+              <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+            </svg>
+          </Link>
+
+          {/* CTA Button */}
+          <Link
+            href="#contact"
+            className="px-5 py-2.5 rounded-full border border-white bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2 text-white text-[13px] shrink-0"
+          >
+            <span>Get Started</span>
+            <span className="text-white/30">•</span>
+            <span className="text-white/50">its free</span>
+            <ArrowUpRight className="w-3.5 h-3.5 text-white/50" />
+          </Link>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-white lg:hidden ml-2"
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute top-[110%] left-0 right-0 bg-[#181325]/95 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-xl">
+          <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                onClick={() => {
+                  setActiveItem(link.name);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`py-3 px-4 rounded-xl text-sm ${
+                  activeItem === link.name ? "bg-white/10 text-white" : "text-white/60"
+                }`}
               >
                 {link.name}
               </Link>
             ))}
           </div>
-          <div className="h-6 w-px bg-border hidden lg:block" />
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-            <Link
-              href="#contact"
-              className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(37,99,235,0.5)]"
-            >
-              Book a Free Consultation
-            </Link>
-          </div>
-        </nav>
-
-        {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border p-4 shadow-lg"
-          >
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium py-2 border-b border-border/50"
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Link
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-primary text-white text-center py-3 rounded-xl font-medium mt-4"
-              >
-                Book a Free Consultation
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      )}
     </header>
   );
 }

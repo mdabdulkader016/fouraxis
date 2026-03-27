@@ -6,54 +6,60 @@ import { Target, Users, Server, Clock } from "lucide-react";
 const pillars = [
   {
     title: "Strategy-Driven Execution",
-    description: "We don't just build deliverables — we build solutions aligned with your business goals.",
+    description: "We don't just build deliverables — we build solutions aligned with your business.",
     icon: Target,
   },
   {
-    title: "Design + Development in One Team",
-    description: "From concept to launch, our integrated workflow keeps projects faster, cleaner, and more consistent.",
+    title: "Design + Dev in One Team",
+    description: "From concept to launch, our integrated workflow keeps projects faster.",
     icon: Users,
   },
   {
     title: "Scalable, Maintainable Quality",
-    description: "We prioritize performance, clean structure, and long-term usability so your product is built to grow.",
+    description: "We prioritize performance and clean structure so your product grows.",
     icon: Server,
   },
   {
-    title: "Clear Communication & Reliable Delivery",
-    description: "Transparent collaboration, milestone-based execution, and dependable timelines you can trust.",
+    title: "Clear & Reliable Delivery",
+    description: "Transparent collaboration and dependable timelines you can trust.",
     icon: Clock,
   },
 ];
 
 export function WhyChooseSection() {
   return (
-    <section className="py-32 relative border-y border-border/50 bg-background/50">
+    <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        
+        <div className="text-center max-w-3xl mx-auto mb-16">
+           <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent text-xs font-bold tracking-wide uppercase mb-6"
+             >
+            Features & Benefits
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-display font-bold mb-6"
+            className="text-4xl md:text-5xl font-display font-bold text-white mb-6"
           >
-            Why Businesses Choose Syntaxview
+            Delivering excellence: Features & Benefits
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-muted text-balance"
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.1 }}
+             className="text-lg text-white/50"
           >
-            We combine technical expertise, design thinking, and practical execution to deliver digital solutions that actually move the needle.
+            Total 0140 0000000 (Placeholder Contact)
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-          {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-px bg-border/50 -z-10" />
-
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
@@ -61,22 +67,18 @@ export function WhyChooseSection() {
                 key={pillar.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center text-center group"
+                className="glass-card p-8 rounded-3xl flex flex-col relative overflow-hidden group h-full"
               >
-                <div className="w-24 h-24 rounded-full bg-background border-2 border-border/50 flex items-center justify-center mb-8 relative group-hover:border-primary/50 transition-colors duration-500">
-                  <div className="absolute inset-0 rounded-full bg-primary/5 scale-0 group-hover:scale-100 transition-transform duration-500" />
-                  <Icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-500" />
-                  
-                  {/* Number indicator */}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold shadow-lg">
-                    {index + 1}
-                  </div>
+                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                 
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-white/70 group-hover:text-primary group-hover:border-primary/30 transition-colors">
+                  <Icon className="w-5 h-5" />
                 </div>
                 
-                <h3 className="text-xl font-display font-bold mb-4">{pillar.title}</h3>
-                <p className="text-muted leading-relaxed">{pillar.description}</p>
+                <h3 className="text-lg font-display font-bold text-white mb-3">{pillar.title}</h3>
+                <p className="text-sm text-white/50 leading-relaxed">{pillar.description}</p>
               </motion.div>
             );
           })}

@@ -1,57 +1,65 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  LayoutTemplate, Compass, Database, ShoppingCart, 
-  Smartphone, Shield, Paintbrush, Share2, 
-  Box, Blocks, Rocket, Wrench
-} from "lucide-react";
+import { LayoutTemplate, Database, Smartphone } from "lucide-react";
 
 const capabilities = [
-  { text: "Landing Pages & Funnels", icon: LayoutTemplate },
-  { text: "Corporate Websites", icon: Compass },
-  { text: "SaaS Dashboards", icon: Database },
-  { text: "E-commerce Interfaces", icon: ShoppingCart },
-  { text: "Mobile App UI", icon: Smartphone },
-  { text: "Admin Panels", icon: Shield },
-  { text: "Brand Graphics", icon: Paintbrush },
-  { text: "Social Media Creatives", icon: Share2 },
-  { text: "Design Systems", icon: Box },
-  { text: "API Integrations", icon: Blocks },
-  { text: "MVP Development", icon: Rocket },
-  { text: "Maintenance & Iteration", icon: Wrench },
+  { 
+    text: "High-Converting Landing Pages & Sales Funnels", 
+    icon: LayoutTemplate,
+    description: "Designed strictly for conversion and speed.",
+    bgType: "glow-left"
+  },
+  { 
+    text: "Complex SaaS Dashboards & Portals", 
+    icon: Database,
+    description: "Data-heavy interfaces made intuitive and beautiful.",
+    bgType: "glow-center"
+  },
+  { 
+    text: "Native & Cross-platform Mobile App UI", 
+    icon: Smartphone,
+    description: "Fluid mobile experiences built for engagement.",
+    bgType: "glow-right"
+  },
 ];
 
 export function CapabilitiesGrid() {
   return (
-    <section className="py-32 relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-secondary/10 rounded-[100%] blur-[120px] -z-10 pointer-events-none" />
-      
+    <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="max-w-2xl">
+        
+        <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-16 max-w-6xl mx-auto">
+          <div className="max-w-xl">
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent text-xs font-bold tracking-wide uppercase mb-6"
+             >
+              Analysis & Strategy
+            </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-display font-bold mb-6"
+              className="text-4xl md:text-5xl font-display font-bold text-white leading-tight"
             >
-              Core Capabilities
+              Help you find the best capabilities for your business
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-lg text-muted text-balance"
-            >
-              A flexible service stack tailored to product launches, business growth, and digital transformation.
-            </motion.p>
           </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-base text-white/50 max-w-sm"
+          >
+            A flexible service stack tailored to product launches, business growth, and digital transformation.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {capabilities.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -59,24 +67,41 @@ export function CapabilitiesGrid() {
                 key={item.text}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{ scale: 1.02 }}
-                className="group relative p-6 rounded-2xl border border-border bg-background/50 hover:bg-card backdrop-blur-sm transition-all overflow-hidden flex flex-col items-center text-center gap-4 cursor-default"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-card p-1 relative rounded-3xl overflow-hidden group cursor-default h-[400px] flex flex-col"
               >
-                {/* Hover spotlight */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                <div className="p-3 rounded-full bg-muted/10 group-hover:bg-primary/10 transition-colors z-10 text-foreground/70 group-hover:text-primary">
-                  <Icon className="w-6 h-6" />
+                {/* Visual Top Portion matching the "dark dashboard mockups" vibe */}
+                <div className="w-full h-3/5 bg-[#0b0617] rounded-t-[1.3rem] rounded-b-xl border-b border-white/5 relative overflow-hidden flex items-center justify-center p-6">
+                  {/* Faux charts / icons */}
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-white/10 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500 z-10">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Gradient Glows */}
+                  {item.bgType === "glow-left" && (
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-primary/40 blur-[50px] rounded-full" />
+                  )}
+                  {item.bgType === "glow-center" && (
+                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-accent/40 blur-[50px] rounded-full" />
+                  )}
+                  {item.bgType === "glow-right" && (
+                     <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/60 blur-[50px] rounded-full" />
+                  )}
+                  
+                  {/* Subtle Grid Pattern */}
+                  <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay" />
                 </div>
-                
-                <span className="font-medium text-sm md:text-base z-10">
-                  {item.text}
-                </span>
-                
-                {/* Animated border line on hover */}
-                <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary to-accent w-0 group-hover:w-full transition-all duration-500 ease-out" />
+
+                {/* Text Bottom Portion */}
+                <div className="p-6 flex flex-col justify-end flex-1">
+                  <h3 className="text-xl font-display font-bold text-white mb-2 leading-tight">
+                    {item.text}
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </motion.div>
             );
           })}

@@ -4,26 +4,14 @@
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 15 23 42;
-    --primary: 37 99 235;
-    --primary-hover: 29 78 216;
-    --secondary: 67 56 202;
-    --accent-glow: 56 189 248;
-    --muted: 71 85 105;
-    --card-bg: 255 255 255;
-    --border-color: 15 23 42;
-  }
-
-  .dark {
-    --background: 3 7 18;
-    --foreground: 248 250 252;
-    --primary: 37 99 235;
-    --primary-hover: 59 130 246;
+    --background: 10 5 20;
+    --foreground: 255 255 255;
+    --primary: 168 85 247;
+    --primary-hover: 192 132 252;
     --secondary: 79 70 229;
-    --accent-glow: 56 189 248;
+    --accent-glow: 236 72 153;
     --muted: 148 163 184;
-    --card-bg: 20 20 20;
+    --card-bg: 20 15 40;
     --border-color: 255 255 255;
   }
 }
@@ -31,6 +19,8 @@
 @layer base {
   body {
     @apply bg-background text-foreground antialiased;
+    background-color: rgb(var(--background));
+    overflow-x: hidden;
   }
   ::selection {
     @apply bg-primary/30;
@@ -42,10 +32,20 @@
     text-wrap: balance;
   }
   .glass-card {
-    @apply bg-card/60 dark:bg-card/5 backdrop-blur-xl border border-border/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+    @apply bg-white/[0.02] backdrop-blur-xl border border-white/5 shadow-[0_8px_32px_0_rgba(168,85,247,0.05)];
+  }
+  .glass-card-hover {
+    @apply hover:bg-white/[0.05] hover:border-white/10 hover:shadow-[0_8px_32px_0_rgba(168,85,247,0.15)] transition-all duration-300;
   }
   .glass-nav {
-    @apply bg-background/70 backdrop-blur-lg border-b border-border/10;
+    @apply bg-background/50 backdrop-blur-xl border-b border-white/5;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500;
+  }
+  
+  .glow-bg {
+    @apply absolute rounded-full mix-blend-screen filter blur-[100px] opacity-40 pointer-events-none;
   }
 }
 
@@ -53,19 +53,15 @@
 html.lenis, html.lenis body {
   height: auto;
 }
-
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
-
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
-
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }

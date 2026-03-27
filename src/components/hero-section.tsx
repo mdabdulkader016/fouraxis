@@ -1,130 +1,91 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Zap, Layers, Rocket } from "lucide-react";
+import { Star, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-
-const chips = [
-  { text: "Fast Delivery", icon: Rocket },
-  { text: "Pixel-Perfect UI", icon: Layers },
-  { text: "Scalable Code", icon: Code },
-  { text: "Conversion-Focused Design", icon: Zap },
-];
 
 export function HeroSection() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-12 mt-12 md:mt-0">
-      <div className="flex-1 w-full max-w-3xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background/50 backdrop-blur-sm mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-sm font-medium text-foreground/80">Full-Stack Digital Product Partner</span>
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-display font-bold leading-tight mb-8"
-        >
-          Build Bold <br className="hidden md:block" />
-          Digital Products <br className="hidden md:block" />
-          with <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Syntaxview</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-lg md:text-xl text-muted text-balance mb-10 max-w-2xl leading-relaxed"
-        >
-          From high-performance websites and scalable mobile apps to intuitive UX/UI and standout visual design — 
-          Syntaxview helps businesses launch faster, look sharper, and grow smarter.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center gap-4 mb-16"
-        >
-          <Link
-            href="#contact"
-            className="w-full sm:w-auto px-8 py-4 bg-primary text-white text-base font-medium rounded-full hover:bg-primary-hover hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all flex items-center justify-center gap-2 group"
-          >
-            Book a Free Consultation
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            href="#services"
-            className="w-full sm:w-auto px-8 py-4 bg-background border border-border hover:bg-muted/10 text-foreground text-base font-medium rounded-full transition-all flex items-center justify-center"
-          >
-            View Our Services
-          </Link>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="flex flex-wrap gap-x-8 gap-y-4"
-        >
-          <p className="w-full text-xs font-semibold text-muted uppercase tracking-wider mb-2">Web • App • UX/UI • Graphics</p>
-          <p className="text-sm text-foreground/60 w-full">Crafted for startups, brands, and growing businesses</p>
-        </motion.div>
-      </div>
-
-      <div className="flex-1 relative hidden lg:block h-[600px] w-full">
-        {/* Abstract floating chips / visual elements */}
-        {chips.map((chip, index) => {
-          const Icon = chip.icon;
-          return (
-            <motion.div
-              key={chip.text}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ 
-                opacity: 1, 
-                scale: 1,
-                y: [0, -20, 0]
-              }}
-              transition={{ 
-                duration: 5, 
-                repeat: Infinity, 
-                delay: index * 0.8,
-                ease: "easeInOut",
-                opacity: { duration: 0.5, delay: 1 + index * 0.2 }
-              }}
-              className="absolute glass-card px-6 py-4 rounded-2xl flex items-center gap-4 z-10"
-              style={{
-                top: `${20 + index * 20}%`,
-                left: index % 2 === 0 ? '10%' : '40%',
-              }}
-            >
-              <div className="p-3 bg-primary/20 rounded-xl">
-                <Icon className="w-6 h-6 text-primary" />
-              </div>
-              <span className="font-semibold text-sm whitespace-nowrap">{chip.text}</span>
-            </motion.div>
-          );
-        })}
-        
-        {/* Core floating orb */}
-        <motion.div
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.05, 1]
-          }}
-          transition={{
-            rotate: { duration: 30, repeat: Infinity, ease: "linear" },
-            scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-[80px]"
+    <div className="relative flex flex-col items-center justify-center text-center min-h-[75vh] pt-32 pb-12 z-10 w-full">
+      
+      {/* Exact Match Background Glows */}
+      {/* Exact Match SVG Background */}
+      <div className="absolute inset-0 pointer-events-none -z-30 overflow-hidden flex justify-center items-start">
+        <img 
+          src="/BG.svg" 
+          alt="Hero Background" 
+          className="w-full h-full object-cover object-top opacity-90 mix-blend-screen"
         />
       </div>
+      
+      {/* Bottom fade for seamless blending into next section */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0b0514] to-transparent pointer-events-none -z-20" />
+
+      {/* Floating 3D Elements removed */}
+
+      {/* Top Pill with Lines */}
+      <div className="flex items-center gap-4 mb-6 w-full max-w-3xl mx-auto px-4 relative z-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-[#581c87] to-[#d8b4fe] flex-1 opacity-50" />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full border border-[#a855f7]/40 bg-[#160f24]/80 backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+        >
+          <Star className="w-3.5 h-3.5 text-white" fill="currentColor" />
+          <span className="text-[13px] font-medium tracking-wide text-white/90">Top Rated Software Consulting Firm</span>
+        </motion.div>
+        <div className="h-px bg-gradient-to-l from-transparent via-[#581c87] to-[#d8b4fe] flex-1 opacity-50" />
+      </div>
+
+      {/* Headline */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-[2.5rem] md:text-[3.6rem] lg:text-[4.5rem] font-display font-medium leading-[1.05] tracking-tight text-white relative z-10 mx-auto px-4 shadow-black drop-shadow-md flex flex-col items-center w-full"
+      >
+        <span className="text-center block">Make powerful digital solution</span>
+        <span className="italic text-[#0866f1] text-center block" style={{ marginTop: '-0.1em' }}>with us.</span>
+      </motion.h1>
+
+      {/* Subtext */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-[15px] md:text-[1.1rem] text-white/80 mt-6 mb-10 max-w-[600px] mx-auto px-4 font-normal leading-relaxed tracking-wide z-10 text-center"
+      >
+        <p>We build secure, high-end, tailored solution for your business.</p>
+      </motion.div>
+
+      {/* Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="flex flex-col sm:flex-row items-center gap-5 z-10"
+      >
+        <Link
+          href="#chat"
+          className="px-7 py-3.5 bg-[#171124] border border-white hover:bg-white/10 text-white text-[15px] font-medium rounded-full transition-all flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+            <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+          </svg>
+          Chat Now
+        </Link>
+
+        <Link
+          href="#quote"
+          className="px-7 py-3.5 bg-[#5E00FF] text-white text-[15px] font-medium rounded-full hover:bg-[#4b00cc] transition-all shadow-[0_0_30px_rgba(94,0,255,0.5)] border border-white flex items-center justify-center gap-2 w-full sm:w-auto relative overflow-hidden"
+        >
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-full pointer-events-none" />
+          <span className="relative z-10 shadow-black drop-shadow-md">Get A Quote</span>
+          <ArrowUpRight className="w-4 h-4 text-white relative z-10 shadow-black drop-shadow-md" />
+        </Link>
+      </motion.div>
     </div>
   );
 }
