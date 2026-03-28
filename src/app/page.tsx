@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { AboutSection } from "@/components/about-section";
 import { ProcessSection } from "@/components/process-section";
+import { ApproachSection } from "@/components/approach-section";
 import { ResultsSection } from "@/components/results-section";
 import { ServicesSection } from "@/components/services-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
@@ -30,6 +31,7 @@ export default function Home() {
       <ResultsSection />
       <BlogSection />
       <PortfolioPreview />
+      <ApproachSection />
       <ServicesSection />
       <TestimonialsSection />
       <CapabilitiesGrid />

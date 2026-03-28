@@ -168,8 +168,7 @@ export function ProcessSection() {
               WebkitClipPath: "inset(0 0 -100px 0 round 250px 250px 0 0)"
             }}
           >
-            {/* Intense Inner Glow Line across the center top edge only */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,102,255)] to-transparent opacity-100" />
+            {/* Removed the intense inner glow line */}
             
             {/* Subtle top-surface light bloom */}
             <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
@@ -225,7 +224,7 @@ export function ProcessSection() {
               >
                 {/* Enhanced Cinema Horizon Glow with Boosted Brightness */}
                 <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.45)_0%,transparent_70%)] blur-3xl pointer-events-none -z-10 animate-pulse-slow" />
-                <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-[rgb(0,120,255)] to-transparent opacity-100 pointer-events-none drop-shadow-[0_0_8px_rgba(0,120,255,0.8)]" />
+                {/* Removed the straight bottom glowing line */}
 
                 <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
                   <img 
@@ -243,7 +242,7 @@ export function ProcessSection() {
           </div>
         </div>
       </section>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
+      {/* Removed Bottom Divider Line */}
     </>
   );
 }

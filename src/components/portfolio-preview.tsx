@@ -205,7 +205,7 @@ export function PortfolioPreview() {
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-purple-600/5 blur-[150px] rounded-full pointer-events-none" />
       
       {/* Bottom Divider Line for a cleaner section transition */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none mt-20" />
+      {/* Removed Bottom Divider Line */}
     </section>
   );
 }
