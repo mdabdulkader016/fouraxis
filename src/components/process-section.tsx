@@ -39,7 +39,7 @@ const stages = [
 function ProcessCard({ stage, index, total }: { stage: any; index: number; total: number }) {
   const Icon = stage.icon;
   const cardRef = useRef<HTMLDivElement>(null);
-
+  
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start start", "end start"]
@@ -49,9 +49,9 @@ function ProcessCard({ stage, index, total }: { stage: any; index: number; total
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
 
   return (
-    <div
-      className="sticky top-40 w-full mb-12 last:mb-0"
-      style={{
+    <div 
+      className="sticky top-40 w-full mb-12 last:mb-0" 
+      style={{ 
         zIndex: index + 10,
       }}
     >
@@ -62,49 +62,81 @@ function ProcessCard({ stage, index, total }: { stage: any; index: number; total
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: index * 0.1 }}
-        className={`relative p-8 md:p-12 rounded-[2rem] border border-white/[0.05] bg-[#0d0d1b] overflow-hidden group shadow-[0_-20px_80px_rgba(0,0,0,0.6)]`}
+        className="relative p-8 md:p-12 rounded-[3.2rem] border border-white/[0.08] bg-gradient-to-br from-[#0c0c1e] to-[#04040a] overflow-hidden group shadow-2xl"
       >
+        {/* Soft atmospheric top-right glow matching the mockup */}
+        <div className="absolute -top-32 -right-32 w-80 h-80 bg-blue-600/15 blur-[120px] rounded-full pointer-events-none transition-opacity duration-1000 group-hover:opacity-100" />
+        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_90%_10%,rgba(0,120,255,0.12)_0%,transparent_50%)] pointer-events-none" />
+
         {/* Stage Header */}
-        <div className="flex items-center justify-between mb-10">
-          <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-white ring-1 ring-white/5 transition-all duration-500 group-hover:bg-white/[0.08]">
-            <Icon className="w-6 h-6" />
+        <div className="flex items-center justify-between mb-12 relative z-10">
+          <div className="w-16 h-16 rounded-2xl bg-[#0b0514] border border-white/10 flex items-center justify-center text-white ring-1 ring-white/5 shadow-2xl relative">
+            <Icon className="w-7 h-7" />
+            <div className={`absolute inset-0 blur-2xl opacity-10 pointer-events-none bg-blue-500 transition-opacity group-hover:opacity-30`} />
           </div>
-          <div className="px-5 py-2 rounded-full border border-white/10 bg-white/[0.02] text-white/40 text-[11px] font-medium uppercase tracking-[0.2em]">
-            {stage.stage}
+          
+          {/* Stage Badge with Gradient Glow matching "How We Work?" */}
+          <div className="relative inline-flex items-center px-6 py-2 rounded-2xl border border-white/10 bg-[#0b0514] text-white/90 text-[13px] font-medium tracking-wide overflow-hidden shadow-lg">
+            {/* Premium Top Glow Effect (Brand Blue) */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,102,255)] to-transparent z-10" />
+            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-4 bg-[rgb(0,102,255)]/20 blur-md rounded-full pointer-events-none" />
+            
+            <span className="relative z-10">{stage.stage}</span>
           </div>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-display font-medium text-white mb-4 tracking-tight">
-          {stage.title}
-        </h3>
-        <p className="text-white/60 text-[15px] leading-relaxed mb-10 max-w-md font-light">
-          {stage.description}
-        </p>
+        <div className="relative z-10">
+          <h3 className="text-[1.75rem] md:text-[2.2rem] font-display font-medium text-white mb-2 tracking-tight">
+            {stage.title}
+          </h3>
+          
+          {/* Subtle title divider same as mockup detail */}
+          <div className="w-48 h-[1px] bg-gradient-to-r from-white/20 to-transparent mb-8" />
+          
+          <p className="text-white/50 text-[16px] leading-relaxed mb-10 max-w-md font-normal">
+            {stage.description}
+          </p>
+        </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-3 mb-12 relative z-10">
           {stage.tags.map((tag: string) => (
-            <span
+            <span 
               key={tag}
-              className="px-4 py-2 rounded-full border border-white/[0.05] bg-white/[0.01] text-white/30 text-xs font-light hover:text-white/60 transition-colors"
+              className="px-5 py-2.5 rounded-2xl border border-white/[0.08] bg-white/[0.02] text-white/40 text-[13px] font-light hover:bg-white/[0.05] hover:text-white/70 transition-all cursor-default"
             >
               {tag}
             </span>
           ))}
         </div>
 
+        {/* Action Button - Identical to "View About Us" button style */}
         {stage.hasCTA && (
-          <Link
-            href="#contact"
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] transition-all shadow-[0_10px_40px_rgba(94,0,255,0.3)] group/btn"
-          >
-            Book an Appointment
-            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform" />
-          </Link>
+          <div className="relative z-10">
+            <Link
+              href="#contact"
+              className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] transition-all shadow-[0_0_20px_rgba(94,0,255,0.4)] flex items-center justify-center relative overflow-hidden w-fit group/btn active:scale-95"
+            >
+              <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
+              <span className="relative z-10 flex items-center gap-2">
+                Book an Appointment
+                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
         )}
 
-        {/* Deep background accent */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${stage.color} opacity-40 pointer-events-none`} />
+        {/* Blur Logo Background Watermark - High End Branding */}
+        <div className="absolute inset-x-0 -bottom-32 -right-32 w-[130%] h-[130%] pointer-events-none opacity-[0.03] group-hover:opacity-[0.05] transition-opacity duration-1000 rotate-12">
+          <img 
+            src="/blur logo.svg" 
+            alt="Logo watermark" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+
+        {/* Subtle Dynamic color accent */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${stage.color} opacity-5 pointer-events-none transition-opacity duration-700 group-hover:opacity-15`} />
       </motion.div>
     </div>
   );
@@ -128,27 +160,27 @@ export function ProcessSection() {
           {/* Focused Blue Radial Glow Peak - Above the Stage */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[200%] bg-[radial-gradient(ellipse_at_bottom,rgba(0,102,255,0.3)_0%,transparent_70%)] blur-[50px] -translate-y-[80%]" />
 
-          {/* The Flat Curved Stage Shape - More Rounded & Clipped to eliminate box artifacts */}
-          <div
-            className="relative w-[95%] max-w-[1400px] h-full bg-[#0b0514] rounded-t-[120px] md:rounded-t-[180px] border-t border-white/[0.08] flex items-center justify-center"
+          {/* The Flat Curved Stage Shape - Maximum Rounded Arc & Clipped to eliminate box artifacts */}
+          <div 
+            className="relative w-[95%] max-w-[1400px] h-full bg-[#0b0514] rounded-t-[250px] md:rounded-t-[400px] border-t border-white/[0.08] flex items-center justify-center"
             style={{
-              clipPath: "inset(0 0 -100px 0 round 120px 120px 0 0)",
-              WebkitClipPath: "inset(0 0 -100px 0 round 120px 120px 0 0)"
+              clipPath: "inset(0 0 -100px 0 round 250px 250px 0 0)",
+              WebkitClipPath: "inset(0 0 -100px 0 round 250px 250px 0 0)"
             }}
           >
             {/* Intense Inner Glow Line across the center top edge only */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,102,255)] to-transparent opacity-100" />
-
+            
             {/* Subtle top-surface light bloom */}
             <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
           </div>
         </div>
 
         <div className="absolute inset-0 bg-[#0b0514] -z-20" />
-
+        
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-7xl mx-auto relative">
-
+            
             {/* Left Column - Scrolling/Stacking Cards */}
             <div className="flex flex-col">
               <div className="mb-20">
@@ -164,7 +196,7 @@ export function ProcessSection() {
 
                 <h2 className="text-4xl md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
                   <span className="text-white block mb-1">We Simplify The Journey</span>
-                  <span className="text-white/40 block">From Scratch To Product.</span>
+                  <span className="text-white/40 block">From Design To Launch.</span>
                 </h2>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -187,17 +219,21 @@ export function ProcessSection() {
 
             {/* Right Column - Sticky Visual */}
             <div className="hidden lg:block sticky top-40 self-start">
-              <motion.div
+              <motion.div 
                 style={{ opacity: imageOpacity }}
                 className="relative z-10 w-full max-w-md lg:max-w-none mx-auto rounded-3xl p-2 sm:p-4 border border-white/5 bg-white/[0.02]"
               >
-                <div className="relative rounded-2xl overflow-hidden aspect-square group bg-black">
-                  <img
-                    src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=80"
-                    alt="Process visualization"
+                {/* Enhanced Cinema Horizon Glow with Boosted Brightness */}
+                <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.45)_0%,transparent_70%)] blur-3xl pointer-events-none -z-10 animate-pulse-slow" />
+                <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-[rgb(0,120,255)] to-transparent opacity-100 pointer-events-none drop-shadow-[0_0_8px_rgba(0,120,255,0.8)]" />
+
+                <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
+                  <img 
+                    src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=80" 
+                    alt="Process visualization" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-grayscale duration-1000"
                   />
-
+                  
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0514] via-transparent to-transparent opacity-80" />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none z-30" />
                 </div>
