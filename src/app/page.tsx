@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { AboutSection } from "@/components/about-section";
 import { ProcessSection } from "@/components/process-section";
+import { ResultsSection } from "@/components/results-section";
 import { ServicesSection } from "@/components/services-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { CapabilitiesGrid } from "@/components/capabilities-grid";
@@ -25,6 +26,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProcessSection />
+      <ResultsSection />
       <ServicesSection />
       <TestimonialsSection />
       <CapabilitiesGrid />
