@@ -4,15 +4,12 @@ import { AboutSection } from "@/components/about-section";
 import { ProcessSection } from "@/components/process-section";
 import { ApproachSection } from "@/components/approach-section";
 import { ResultsSection } from "@/components/results-section";
-import { ServicesSection } from "@/components/services-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
-import { CapabilitiesGrid } from "@/components/capabilities-grid";
-import { WhyChooseSection } from "@/components/why-choose-section";
-import { PortfolioPreview } from "@/components/portfolio-preview";
-import { PricingSection } from "@/components/pricing-section";
 import { FaqSection } from "@/components/faq-section";
-import { FinalCtaSection } from "@/components/final-cta-section";
+import { CtaSection } from "@/components/cta-section";
 import { BlogSection } from "@/components/blog-section";
+import { PortfolioPreview } from "@/components/portfolio-preview";
+import { TrustSection } from "@/components/trust-section";
 import { Footer } from "@/components/footer";
 import { ScrollFocusWrapper } from "@/components/scroll-focus-wrapper";
 
@@ -32,13 +29,10 @@ export default function Home() {
       <BlogSection />
       <PortfolioPreview />
       <ApproachSection />
-      <ServicesSection />
+      <TrustSection />
       <TestimonialsSection />
-      <CapabilitiesGrid />
-      <WhyChooseSection />
-      <PricingSection />
       <FaqSection />
-      <FinalCtaSection />
+      <CtaSection />
       <Footer />
     </main>
   );

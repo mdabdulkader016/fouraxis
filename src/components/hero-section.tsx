@@ -42,7 +42,7 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full border border-[#a855f7]/40 bg-[#160f24]/80 backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+          className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full border border-[#a855f7]/40 bg-[#160f24]/80 backdrop-blur-md"
         >
           <Star className="w-4 h-4 text-white" fill="currentColor" />
           <span className="text-[16px] font-light tracking-wide text-white">Top Rated Software Consulting Firm</span>
@@ -82,7 +82,7 @@ export function HeroSection() {
       >
         <Link
           href="#chat"
-          className="px-8 py-4 bg-[#171124] border border-white hover:bg-white/10 text-white text-[16px] font-light rounded-full transition-all flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg"
+          className="px-8 py-4 bg-[#171124] border border-white hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:-translate-y-1 text-white text-[16px] font-light rounded-full transition-all flex items-center justify-center gap-3 w-full sm:w-auto"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
@@ -93,7 +93,7 @@ export function HeroSection() {
 
         <Link
           href="#quote"
-          className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-full hover:bg-[#4b00cc] transition-all shadow-[0_0_30px_rgba(94,0,255,0.5)] border border-white flex items-center justify-center gap-2 w-full sm:w-auto relative overflow-hidden"
+          className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-full hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all border border-white flex items-center justify-center gap-2 w-full sm:w-auto relative overflow-hidden"
         >
           <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-full pointer-events-none" />
           <span className="relative z-10 shadow-black drop-shadow-md">Get A Quote</span>

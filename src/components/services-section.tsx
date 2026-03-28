@@ -37,7 +37,7 @@ export function ServicesSection() {
       <div className="container mx-auto px-4 md:px-8">
         
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden shadow-xl z-10">
+          <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden z-10">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />
             <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0" />
@@ -67,11 +67,7 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`glass-card glass-card-hover p-8 rounded-[2rem] flex flex-col items-start relative overflow-hidden group ${service.colSpan}`}
               >
-                {/* Inner Glow */}
-                <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-accent/20 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-white group-hover:scale-110 group-hover:bg-primary/20 group-hover:text-primary transition-all duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-all duration-300">
                   <Icon className="w-6 h-6" />
                 </div>
                 
@@ -94,7 +90,7 @@ export function ServicesSection() {
         >
           <Link
             href="#contact"
-            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white text-[16px] font-bold rounded-full hover:opacity-90 transition-all shadow-[0_4px_20px_rgba(168,85,247,0.3)]"
+            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white text-[16px] font-bold rounded-full hover:opacity-90 hover:scale-105 hover:-translate-y-1 transition-all"
           >
             Get Started
           </Link>

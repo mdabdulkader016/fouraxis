@@ -62,21 +62,16 @@ function ProcessCard({ stage, index, total }: { stage: any; index: number; total
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: index * 0.1 }}
-        className="relative p-8 md:p-12 rounded-[3.2rem] border border-white/[0.08] bg-gradient-to-br from-[#0c0c1e] to-[#04040a] overflow-hidden group shadow-2xl"
+        className="relative p-8 md:p-12 rounded-[3.2rem] border border-white/[0.08] bg-gradient-to-br from-[#0c0c1e] to-[#04040a] overflow-hidden group transition-all duration-500 hover:scale-[1.01] hover:border-white/30 shadow-2xl"
       >
-        {/* Soft atmospheric top-right glow matching the mockup */}
-        <div className="absolute -top-32 -right-32 w-80 h-80 bg-blue-600/15 blur-[120px] rounded-full pointer-events-none transition-opacity duration-1000 group-hover:opacity-100" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_90%_10%,rgba(0,120,255,0.12)_0%,transparent_50%)] pointer-events-none" />
-
         {/* Stage Header */}
         <div className="flex items-center justify-between mb-12 relative z-10">
-          <div className="w-16 h-16 rounded-2xl bg-[#0b0514] border border-white/10 flex items-center justify-center text-white ring-1 ring-white/5 shadow-2xl relative">
+          <div className="w-16 h-16 rounded-2xl bg-[#0b0514] border border-white/10 flex items-center justify-center text-white ring-1 ring-white/5 relative">
             <Icon className="w-7 h-7" />
-            <div className={`absolute inset-0 blur-2xl opacity-10 pointer-events-none bg-blue-500 transition-opacity group-hover:opacity-30`} />
           </div>
           
           {/* Stage Badge with Gradient Glow matching "How We Work?" */}
-          <div className="relative inline-flex items-center px-6 py-2 rounded-2xl border border-white/10 bg-[#0b0514] text-white/90 text-[13px] font-medium tracking-wide overflow-hidden shadow-lg">
+          <div className="relative inline-flex items-center px-6 py-2 rounded-2xl border border-white/10 bg-[#0b0514] text-white/90 text-[13px] font-medium tracking-wide overflow-hidden">
             {/* Premium Top Glow Effect (Brand Blue) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,102,255)] to-transparent z-10" />
             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-4 bg-[rgb(0,102,255)]/20 blur-md rounded-full pointer-events-none" />
@@ -115,7 +110,7 @@ function ProcessCard({ stage, index, total }: { stage: any; index: number; total
           <div className="relative z-10">
             <Link
               href="#contact"
-              className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] transition-all shadow-[0_0_20px_rgba(94,0,255,0.4)] flex items-center justify-center relative overflow-hidden w-fit group/btn active:scale-95"
+              className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all flex items-center justify-center relative overflow-hidden w-fit group/btn active:scale-95"
             >
               <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
               <span className="relative z-10 flex items-center gap-2">
@@ -184,7 +179,7 @@ export function ProcessSection() {
             <div className="flex flex-col">
               <div className="mb-20">
                 {/* Badge - Same style as AboutSection */}
-                <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden group shadow-xl">
+                <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden group">
                   {/* Premium Top Glow Effect (Brand Blue) */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
                   <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />

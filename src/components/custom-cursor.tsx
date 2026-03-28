@@ -62,51 +62,28 @@ export function CustomCursor() {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999]">
-      {/* Precision Dot - Follows instantly */}
+      {/* Trailing Ring - Surfaces around the 'hand' cursor on hover */}
       <motion.div
-        className="fixed w-1.5 h-1.5 bg-white rounded-full z-10"
-        style={{
-          x: cursorX,
-          y: cursorY,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
-      />
-
-      {/* Trailing Ring - Lagging behind dot */}
-      <motion.div
-        className="fixed rounded-full border border-white/30 z-0"
-        animate={{
-          width: isHovered ? 60 : 32,
-          height: isHovered ? 60 : 32,
-          backgroundColor: isHovered ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0)",
-          borderColor: isHovered ? "rgba(255, 255, 255, 0.6)" : "rgba(255, 255, 255, 0.3)",
-        }}
-        transition={{ type: "spring", damping: 20, stiffness: 150, mass: 0.5 }}
+        className="fixed rounded-full border-2 border-white/40 z-0 bg-white/5 backdrop-blur-[2px]"
+        initial={{ opacity: 0, scale: 0.5 }}
         style={{
           x: ringX,
           y: ringY,
           translateX: "-50%",
           translateY: "-50%",
         }}
+        animate={{
+          opacity: isHovered ? 1 : 0,
+          scale: isHovered ? 1 : 0.5,
+          width: 54,
+          height: 54,
+        }}
+        transition={{ 
+          opacity: { duration: 0.2 },
+          scale: { type: "spring", damping: 25, stiffness: 200 },
+          default: { type: "spring", damping: 20, stiffness: 150, mass: 0.5 }
+        }}
       />
-      
-      {/* Optional: Add a subtle glow inside the ring on hover */}
-      {isHovered && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="fixed w-full h-full rounded-full bg-white/10 blur-xl pointer-events-none -z-10"
-          style={{
-            x: ringX,
-            y: ringY,
-            width: 80,
-            height: 80,
-            translateX: "-50%",
-            translateY: "-50%",
-          }}
-        />
-      )}
     </div>
   );
 }

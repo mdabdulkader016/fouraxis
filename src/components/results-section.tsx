@@ -52,7 +52,7 @@ const projects = [
 
 function ResultCard({ project }: { project: any }) {
   return (
-    <div className="w-[480px] shrink-0 group relative h-[460px] rounded-[1.8rem] overflow-hidden border border-white/[0.1] bg-[#0a0a14] flex flex-col">
+    <div className="w-[480px] shrink-0 group relative h-[460px] rounded-[1.8rem] overflow-hidden border border-white/[0.1] bg-[#0a0a14] flex flex-col transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1.5">
       {/* Image — top portion */}
       <div className="relative h-[55%] overflow-hidden">
         <img
@@ -103,8 +103,8 @@ function ResultCard({ project }: { project: any }) {
         </div>
       </div>
 
-      {/* Hover border glow */}
-      <div className="absolute inset-0 border border-white/0 group-hover:border-white/15 transition-colors pointer-events-none rounded-[1.8rem]" />
+      {/* Hover border contrast */}
+      <div className="absolute inset-0 border border-white/0 group-hover:border-white/25 transition-colors pointer-events-none rounded-[1.8rem]" />
     </div>
   );
 }
@@ -145,7 +145,7 @@ export function ResultsSection() {
           />
         </div>
         {/* Badge */}
-        <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden shadow-xl z-10">
+        <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
           <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />
           <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0" />
@@ -164,7 +164,7 @@ export function ResultsSection() {
         {/* CTA Button */}
         <Link
           href="#contact"
-          className="relative z-10 px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] transition-all shadow-[0_0_20px_rgba(94,0,255,0.4)] inline-flex items-center gap-2 overflow-hidden active:scale-95"
+          className="relative z-10 px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all inline-flex items-center gap-2 overflow-hidden active:scale-95"
         >
           <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
           <span className="relative z-10 flex items-center gap-2">

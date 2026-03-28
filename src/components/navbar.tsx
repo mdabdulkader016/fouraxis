@@ -52,7 +52,7 @@ export function Navbar() {
           {/* WhatsApp Icon Button */}
           <Link
             href="#whatsapp"
-            className="w-10 h-10 rounded-full border border-white bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors hidden md:flex shrink-0"
+            className="w-10 h-10 rounded-full border border-white bg-white/5 flex items-center justify-center hover:bg-white/10 hover:scale-105 hover:-translate-y-0.5 transition-all hidden md:flex shrink-0"
           >
             <svg
               className="w-4 h-4 text-white"
@@ -71,7 +71,7 @@ export function Navbar() {
           {/* CTA Button */}
           <Link
             href="#contact"
-            className="px-6 py-3 rounded-full border border-white bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2.5 text-white text-[16px] font-light shrink-0"
+            className="px-6 py-3 rounded-full border border-white bg-white/5 hover:bg-white/10 hover:scale-105 hover:-translate-y-0.5 transition-all flex items-center gap-2.5 text-white text-[16px] font-light shrink-0"
           >
             <span>Get Started</span>
             <span className="text-white/30">•</span>
