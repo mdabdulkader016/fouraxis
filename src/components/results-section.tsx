@@ -52,7 +52,7 @@ const projects = [
 
 function ResultCard({ project }: { project: any }) {
   return (
-    <div className="w-[480px] shrink-0 group relative h-[460px] rounded-[1.8rem] overflow-hidden border border-white/[0.1] bg-[#0a0a14] flex flex-col transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1.5">
+    <div className="w-[280px] md:w-[380px] lg:w-[480px] shrink-0 group relative h-[380px] md:h-[420px] lg:h-[460px] rounded-[1.8rem] overflow-hidden border border-white/[0.1] bg-[#0a0a14] flex flex-col transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1.5">
       {/* Image — top portion */}
       <div className="relative h-[55%] overflow-hidden">
         <img
@@ -152,7 +152,7 @@ export function ResultsSection() {
           <span className="tracking-tight relative z-10 text-white">Results</span>
         </div>
 
-        <h2 className="relative z-10 text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl mx-auto">
+        <h2 className="relative z-10 text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl mx-auto">
           <span className="text-white block">Delivering Tangible Results</span>
           <span className="text-white/40 block">That Propel Your Success</span>
         </h2>

@@ -53,7 +53,7 @@ export function CtaSection() {
             <span className="tracking-tight relative z-10 text-white font-medium">Join Us Now</span>
           </div>
 
-          <h2 className="relative z-10 text-4xl md:text-[3.5rem] font-display font-medium leading-[1.15] tracking-tight mb-10 max-w-4xl mx-auto">
+          <h2 className="relative z-10 text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.15] tracking-tight mb-10 max-w-4xl mx-auto">
             <span className="text-white">Each Project we Undertake <br className="hidden md:block" /> </span>
             <span className="text-white/40">is a Unique Opportunity.</span>
           </h2>

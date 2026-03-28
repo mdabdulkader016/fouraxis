@@ -182,10 +182,10 @@ export function ApproachSection() {
         <div className="absolute inset-0 bg-[#0b0514] -z-20" />
         
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-7xl mx-auto relative">
+          <div className="grid xl:grid-cols-2 gap-16 xl:gap-24 items-start max-w-7xl mx-auto relative">
             
             {/* Left Column - Sticky Visual */}
-            <div className="hidden lg:block sticky top-40 self-start order-2 lg:order-1">
+            <div className="hidden xl:block sticky top-40 self-start order-2 xl:order-1">
               <motion.div 
                 style={{ opacity: imageOpacity }}
                 className="relative z-10 w-full max-w-md lg:max-w-none mx-auto rounded-3xl p-2 sm:p-4 border border-white/5 bg-white/[0.02]"
@@ -205,7 +205,7 @@ export function ApproachSection() {
             </div>
 
             {/* Right Column - Scrolling Cards */}
-            <div className="flex flex-col order-1 lg:order-2">
+            <div className="flex flex-col order-1 xl:order-2">
               <div className="mb-20">
                 <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden group shadow-xl">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
@@ -214,7 +214,7 @@ export function ApproachSection() {
                   <span className="tracking-tight relative z-10 text-white">Our Services</span>
                 </div>
 
-                <h2 className="text-4xl md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
+                <h2 className="text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
                   <span className="text-white block mb-1">Get High-Quality</span>
                   <span className="text-white/40 block">Clear Services Remotely.</span>
                 </h2>

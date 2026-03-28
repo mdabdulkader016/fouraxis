@@ -66,7 +66,7 @@ export function TrustSection() {
           <span className="tracking-tight relative z-10 text-white">Launch Your Site</span>
         </div>
 
-        <h2 className="relative z-10 text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl mx-auto">
+        <h2 className="relative z-10 text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl mx-auto">
           <span className="text-white block">The Trusted Rise Partner</span>
           <span className="text-white/40 block">For Startups And Agencies</span>
         </h2>

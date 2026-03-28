@@ -9,44 +9,44 @@ const blogPosts = [
     id: "requests",
     title: "Submit Unlimited Requests",
     description: "Enjoy the freedom to submit unlimited requests without any restrictions. Whether you need design tweaks, we're here to assist you at every step.",
-    image: "/blog-next.png",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     category: "Service",
-    gridClass: "lg:col-span-2 lg:row-span-2",
+    gridClass: "xl:col-span-2 xl:row-span-2",
     hasButtons: true,
   },
   {
     id: "revisions",
     title: "Requests & Revisions",
     description: "Our process includes multiple rounds of requests and revisions, ensuring that your feedback is incorporated.",
-    image: "/blog-tech.png",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80",
     category: "Process",
-    gridClass: "lg:col-span-2 lg:row-span-1",
+    gridClass: "xl:col-span-2 xl:row-span-1",
     badge: "NEW",
   },
   {
     id: "turnaround",
     title: "Quick Turnaround",
     description: "We prioritize efficiency without compromising quality.",
-    image: "/blog-turnaround.png",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
     category: "Speed",
-    gridClass: "lg:col-span-1 lg:row-span-1",
+    gridClass: "xl:col-span-1 xl:row-span-1",
     badge: "NEW",
   },
   {
     id: "publish",
     title: "Publish in Seconds",
     description: "Publish your site in seconds with our streamlined process.",
-    image: "/blog-publish.png",
+    image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=800&q=80",
     category: "Release",
-    gridClass: "lg:col-span-1 lg:row-span-1",
+    gridClass: "xl:col-span-1 xl:row-span-1",
   },
   {
     id: "pricing",
     title: "Worry Free Pricing",
     description: "Whether you're just starting or scaling up, our flexible pricing plans are designed to fit your needs and budget.",
-    image: "/blog-references.png",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80",
     category: "Value",
-    gridClass: "lg:col-span-2 lg:row-span-2",
+    gridClass: "xl:col-span-2 xl:row-span-2",
     badge: "NEW",
   },
 ];
@@ -76,7 +76,7 @@ function BlogCard({ post }: { post: any }) {
       className={`group relative rounded-[3rem] border border-white/[0.08] bg-[#0a0a14] overflow-hidden flex flex-col ${post.gridClass}`}
     >
       {/* Image Container with Blue Halo */}
-      <div className={`relative overflow-hidden ${post.gridClass.includes('row-span-2') ? "h-[300px] md:h-[340px]" : "h-[220px]"}`}>
+      <div className={`relative overflow-hidden ${post.gridClass.includes('xl:row-span-2') ? "h-[200px] md:h-[260px] xl:h-[320px]" : "h-[180px] md:h-[220px]"}`}>
         <img
           src={post.image}
           alt={post.title}
@@ -170,7 +170,7 @@ export function BlogSection() {
           </div>
 
           <div className="max-w-4xl mb-12">
-            <h2 className="text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-12">
+            <h2 className="text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-12">
             <span className="text-white block mb-2">Built with Skill. Delivered with Care.</span>
             <span className="text-white/40 block">Dream Big. We’ll Build It.</span>
           </h2>
@@ -213,7 +213,7 @@ export function BlogSection() {
         </div>
 
         {/* Bento Grid (4 Columns) with exactly matched order and spans */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 auto-rows-auto">
           {/* Card 1: Submit Unlimited Requests (Large Top Left) */}
           <BlogCard post={blogPosts[0]} />
           

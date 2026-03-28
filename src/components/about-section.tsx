@@ -9,7 +9,7 @@ export function AboutSection() {
     <>
       <section id="about" className="py-24 relative overflow-hidden bg-[#0b0514]">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
+        <div className="grid xl:grid-cols-2 gap-16 xl:gap-24 items-center max-w-7xl mx-auto">
 
           {/* Left Column - Image */}
           <motion.div
@@ -51,7 +51,7 @@ export function AboutSection() {
             </div>
 
             {/* Headings */}
-            <h2 className="text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
+            <h2 className="text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
               <span className="text-white block mb-1">Building Stronger Brands</span>
               <span className="text-white/40 block">Creating Impressions!</span>
             </h2>

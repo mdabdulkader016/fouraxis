@@ -28,10 +28,10 @@ export function Footer() {
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent pointer-events-none" />
 
           {/* Main Content Grid */}
-          <div className="relative z-10 grid lg:grid-cols-12 gap-16 lg:gap-8 mb-6 items-start">
+          <div className="relative z-10 grid md:grid-cols-2 xl:grid-cols-12 gap-10 xl:gap-8 mb-6 items-start">
 
             {/* Column 1: Brand & Newsletter */}
-            <div className="lg:col-span-4 space-y-10">
+            <div className="xl:col-span-4 space-y-10">
               <Link href="/" className="flex items-center shrink-0">
                 <img src="/Logo.png" alt="Logo" className="h-8 max-w-[120px] object-contain brightness-0 invert" />
               </Link>
@@ -61,7 +61,7 @@ export function Footer() {
             </div>
 
             {/* Column 2: Template Pages */}
-            <div className="lg:col-span-2">
+            <div className="xl:col-span-2">
               <h4 className="text-white text-[16px] font-medium mb-8">Pages</h4>
               <ul className="space-y-5 text-[15px] font-light text-white/40">
                 <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -73,10 +73,9 @@ export function Footer() {
             </div>
 
             {/* Column 3: Social */}
-            <div className="lg:col-span-2">
+            <div className="xl:col-span-2">
               <h4 className="text-white text-[16px] font-medium mb-8">Social</h4>
               <ul className="space-y-5 text-[15px] font-light text-white/40">
-                <li><a href="#" className="hover:text-white transition-colors">Twitter (X)</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Youtube</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Linkedin</a></li>
@@ -84,7 +83,7 @@ export function Footer() {
             </div>
 
             {/* Column 4: CTA Showcase */}
-            <div className="lg:col-span-4 flex flex-col items-center lg:items-end text-center lg:text-right space-y-8">
+            <div className="xl:col-span-4 md:col-span-2 flex flex-col items-center xl:items-end text-center xl:text-right space-y-8">
               <div className="space-y-4 max-w-[320px]">
                 <h4 className="text-white text-[24px] md:text-[28px] font-medium leading-tight">
                   Ready to start your next project?

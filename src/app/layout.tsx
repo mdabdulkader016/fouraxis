@@ -9,6 +9,11 @@ const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 export const metadata: Metadata = {
   title: "Fouraxis | Web, App, UX/UI & Graphics Design Solutions",
   description: "Fouraxis delivers premium web development, app development, UX/UI design, and graphics design services for businesses that want modern digital experiences that perform.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

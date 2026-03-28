@@ -53,7 +53,8 @@ export function FaqSection() {
       <div className="absolute inset-0 bg-[#0b0514] -z-20" />
 
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
+        <div className="grid xl:grid-cols-12 gap-12 xl:gap-24">
+
           
           {/* Left Column: Header (Sticky on desktop) */}
           <motion.div 
@@ -61,15 +62,17 @@ export function FaqSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-5 lg:sticky lg:top-32 h-fit"
+            className="xl:col-span-5 xl:sticky xl:top-32 h-fit"
           >
             {/* Badge */}
-            <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 z-10 w-fit">
+            <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden z-10 w-fit">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
+              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />
               <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0" />
               <span className="tracking-tight relative z-10 text-white">FAQ</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight text-white mb-6">
+            <h2 className="text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight text-white mb-6">
               Frequently <br /> <span className="text-white/40 whitespace-nowrap">Asked Questions</span>
             </h2>
             
@@ -79,7 +82,7 @@ export function FaqSection() {
           </motion.div>
 
           {/* Right Column: Accordion */}
-          <div className="lg:col-span-7 space-y-4">
+          <div className="xl:col-span-7 space-y-4">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (

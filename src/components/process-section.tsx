@@ -173,7 +173,7 @@ export function ProcessSection() {
         <div className="absolute inset-0 bg-[#0b0514] -z-20" />
         
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-7xl mx-auto relative">
+          <div className="grid xl:grid-cols-2 gap-16 xl:gap-24 items-start max-w-7xl mx-auto relative">
             
             {/* Left Column - Scrolling/Stacking Cards */}
             <div className="flex flex-col">
@@ -188,7 +188,7 @@ export function ProcessSection() {
                   <span className="tracking-tight relative z-10 text-white">How We Work?</span>
                 </div>
 
-                <h2 className="text-4xl md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
+                <h2 className="text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
                   <span className="text-white block mb-1">We Simplify The Journey</span>
                   <span className="text-white/40 block">From Design To Launch.</span>
                 </h2>
@@ -212,7 +212,7 @@ export function ProcessSection() {
             </div>
 
             {/* Right Column - Sticky Visual */}
-            <div className="hidden lg:block sticky top-40 self-start">
+            <div className="hidden xl:block sticky top-40 self-start">
               <motion.div 
                 style={{ opacity: imageOpacity }}
                 className="relative z-10 w-full max-w-md lg:max-w-none mx-auto rounded-3xl p-2 sm:p-4 border border-white/5 bg-white/[0.02]"

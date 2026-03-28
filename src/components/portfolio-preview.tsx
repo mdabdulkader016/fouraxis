@@ -168,7 +168,7 @@ export function PortfolioPreview() {
             <span className="tracking-tight relative z-10 text-white">Portfolio</span>
           </div>
 
-          <h2 className="text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl">
+          <h2 className="text-[2rem] md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl">
             <span className="text-white block mb-2">Our Selected Projects</span>
             <span className="text-white/40 block">That Propel Your Website.</span>
           </h2>
