@@ -1,4 +1,4 @@
-# Syntaxview Website
+# Fouraxis Website
 
 This is the front-end repository for the Syntaxview / Fouraxis project. This is a modern, high-performance web application built using Next.js, Tailwind CSS, and Framer Motion.
 
