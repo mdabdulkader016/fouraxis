@@ -17,7 +17,7 @@ const projects = [
     id: "project-2",
     title: "Horizon Analytics - Data Platform",
     description: "Enterprise-grade data visualization platform that transforms complex datasets into actionable business intelligence for global retailers.",
-    image: "https://images.unsplash.com/photo-1551288049-bbda38a5f977?auto=format&fit=crop&w=2000&q=80",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80",
     color: "from-purple-600/20 to-purple-400/5",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     id: "project-4",
     title: "Lumina - Creative Portfolio",
     description: "A high-performance aesthetic portfolio for a London-based digital design studio, emphasizing minimalist motion and cinematic presentation.",
-    image: "https://images.unsplash.com/photo-1522542550221-31fd19055cc2?auto=format&fit=crop&w=2000&q=80",
+    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=2000&q=80",
     color: "from-orange-600/20 to-orange-400/5",
   },
   {

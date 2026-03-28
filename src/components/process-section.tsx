@@ -218,14 +218,14 @@ export function ProcessSection() {
                 className="relative z-10 w-full max-w-md lg:max-w-none mx-auto rounded-3xl p-2 sm:p-4 border border-white/5 bg-white/[0.02]"
               >
                 {/* Enhanced Cinema Horizon Glow with Boosted Brightness */}
-                <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.45)_0%,transparent_70%)] blur-3xl pointer-events-none -z-10 animate-pulse-slow" />
+                <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.6)_0%,transparent_70%)] blur-3xl pointer-events-none -z-10 animate-pulse-slow" />
                 {/* Removed the straight bottom glowing line */}
 
                 <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
                   <img 
-                    src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=80" 
+                    src="/shamin-haky-RIk-i9rXPao-unsplash.jpg" 
                     alt="Process visualization" 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-grayscale duration-1000"
+                    className="w-full h-full object-cover transition-all duration-1000"
                   />
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0514] via-transparent to-transparent opacity-80" />

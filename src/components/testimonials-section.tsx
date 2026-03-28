@@ -118,14 +118,14 @@ export function TestimonialsSection() {
         </p>
 
         {/* Logo Marquee */}
-        <div className="relative w-full overflow-hidden mb-12 opacity-30 grayscale hover:opacity-60 transition-opacity duration-500 marquee-mask">
+        <div className="relative w-full overflow-hidden mb-12 opacity-30 hover:opacity-60 transition-opacity duration-500 marquee-mask">
           <div className="flex animate-logo-marquee gap-12 sm:gap-24 py-4 w-max px-8">
             {[...brands, ...brands, ...brands].map((brand, idx) => (
               <div key={idx} className="flex items-center gap-3 shrink-0">
                 <img 
                   src={brand.logo} 
                   alt={brand.name} 
-                  className="w-8 h-8 object-contain invert"
+                  className="w-8 h-8 object-contain"
                 />
                 <span className="font-display font-bold text-xl tracking-tight text-white uppercase italic">{brand.name}</span>
               </div>

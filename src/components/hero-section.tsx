@@ -129,7 +129,7 @@ export function HeroSection() {
              className="flex items-center w-max"
           >
              {[...techLogos, ...techLogos].map((tool, index) => (
-                <div key={`${tool.name}-${index}`} className="flex items-center justify-center w-[100px] opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                <div key={`${tool.name}-${index}`} className="flex items-center justify-center w-[100px] opacity-70 hover:opacity-100 transition-opacity">
                    <img src={tool.logo} alt={tool.name} title={tool.name} className="h-8 md:h-11 w-auto object-contain brightness-150" />
                 </div>
              ))}
