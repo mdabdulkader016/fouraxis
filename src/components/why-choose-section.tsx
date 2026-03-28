@@ -53,7 +53,7 @@ export function WhyChooseSection() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ delay: 0.1 }}
-             className="text-lg text-white/50"
+             className="text-lg text-white"
           >
             Total 0140 0000000 (Placeholder Contact)
           </motion.p>

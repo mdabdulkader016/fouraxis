@@ -4,6 +4,18 @@ import { motion } from "framer-motion";
 import { Star, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+const techLogos = [
+  { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
+  { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+  { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+  { name: "NextJs", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" }
+];
+
 export function HeroSection() {
   return (
     <div className="relative flex flex-col items-center justify-center text-center min-h-[75vh] pt-32 pb-12 z-10 w-full">
@@ -56,7 +68,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-[15px] md:text-[1.1rem] text-white/80 mt-6 mb-10 max-w-[600px] mx-auto px-4 font-normal leading-relaxed tracking-wide z-10 text-center"
+        className="text-[15px] md:text-[1.1rem] text-white mt-6 mb-10 max-w-[600px] mx-auto px-4 font-normal leading-relaxed tracking-wide z-10 text-center"
       >
         <p>We build secure, high-end, tailored solution for your business.</p>
       </motion.div>
@@ -87,6 +99,42 @@ export function HeroSection() {
           <span className="relative z-10 shadow-black drop-shadow-md">Get A Quote</span>
           <ArrowUpRight className="w-4 h-4 text-white relative z-10 shadow-black drop-shadow-md" />
         </Link>
+      </motion.div>
+
+      {/* Tech Stack Ticker */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="w-full max-w-[500px] mx-auto mt-20 relative z-10 flex flex-col items-center"
+      >
+        {/* Faded Divider Line */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
+        
+        {/* Scrolling Logos */}
+        <div 
+          className="w-full overflow-hidden"
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)"
+          }}
+        >
+          <motion.div
+             animate={{ x: ["0%", "-50%"] }}
+             transition={{ 
+               duration: 25,
+               repeat: Infinity,
+               ease: "linear"
+             }}
+             className="flex items-center w-max"
+          >
+             {[...techLogos, ...techLogos].map((tool, index) => (
+                <div key={`${tool.name}-${index}`} className="flex items-center justify-center w-[100px] opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                   <img src={tool.logo} alt={tool.name} title={tool.name} className="h-8 md:h-11 w-auto object-contain brightness-150" />
+                </div>
+             ))}
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );

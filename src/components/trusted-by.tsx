@@ -18,7 +18,7 @@ export function TrustedBy() {
   return (
     <section className="pb-32 relative z-20 -mt-2">
       <div className="container mx-auto px-4 text-center mb-10 pt-4">
-        <h2 className="text-[15px] font-normal text-white/60 tracking-wide">
+        <h2 className="text-[15px] font-normal text-white tracking-wide">
           Revolutionizing Client Solutions with the Best Tools
         </h2>
       </div>

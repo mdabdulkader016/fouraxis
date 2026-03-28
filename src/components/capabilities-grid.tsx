@@ -53,7 +53,7 @@ export function CapabilitiesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-base text-white/50 max-w-sm"
+            className="text-base text-white max-w-sm"
           >
             A flexible service stack tailored to product launches, business growth, and digital transformation.
           </motion.p>

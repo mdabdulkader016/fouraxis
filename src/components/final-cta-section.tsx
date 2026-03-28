@@ -43,7 +43,7 @@ export function FinalCtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-lg text-white/50 text-balance mx-auto mb-12 leading-relaxed max-w-xl"
+          className="text-lg text-white text-balance mx-auto mb-12 leading-relaxed max-w-xl"
         >
           Have a project in mind? Let&apos;s talk about how we can help you build and scale your next big digital product.
         </motion.p>

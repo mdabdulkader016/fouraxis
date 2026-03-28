@@ -50,7 +50,7 @@ export function ProcessShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted max-w-2xl text-balance"
+            className="text-lg text-white max-w-2xl text-balance"
           >
             Every project at Syntaxview blends creative thinking, technical excellence, and business-focused execution.
           </motion.p>
