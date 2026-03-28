@@ -42,10 +42,10 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full border border-[#a855f7]/40 bg-[#160f24]/80 backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+          className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full border border-[#a855f7]/40 bg-[#160f24]/80 backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.2)]"
         >
-          <Star className="w-3.5 h-3.5 text-white" fill="currentColor" />
-          <span className="text-[13px] font-medium tracking-wide text-white/90">Top Rated Software Consulting Firm</span>
+          <Star className="w-4 h-4 text-white" fill="currentColor" />
+          <span className="text-[16px] font-semibold tracking-wide text-white">Top Rated Software Consulting Firm</span>
         </motion.div>
         <div className="h-px bg-gradient-to-l from-transparent via-[#581c87] to-[#d8b4fe] flex-1 opacity-50" />
       </div>
@@ -82,7 +82,7 @@ export function HeroSection() {
       >
         <Link
           href="#chat"
-          className="px-7 py-3.5 bg-[#171124] border border-white hover:bg-white/10 text-white text-[15px] font-medium rounded-full transition-all flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg"
+          className="px-8 py-4 bg-[#171124] border border-white hover:bg-white/10 text-white text-[16px] font-semibold rounded-full transition-all flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
@@ -93,11 +93,11 @@ export function HeroSection() {
 
         <Link
           href="#quote"
-          className="px-7 py-3.5 bg-[#5E00FF] text-white text-[15px] font-medium rounded-full hover:bg-[#4b00cc] transition-all shadow-[0_0_30px_rgba(94,0,255,0.5)] border border-white flex items-center justify-center gap-2 w-full sm:w-auto relative overflow-hidden"
+          className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-semibold rounded-full hover:bg-[#4b00cc] transition-all shadow-[0_0_30px_rgba(94,0,255,0.5)] border border-white flex items-center justify-center gap-2 w-full sm:w-auto relative overflow-hidden"
         >
           <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-full pointer-events-none" />
           <span className="relative z-10 shadow-black drop-shadow-md">Get A Quote</span>
-          <ArrowUpRight className="w-4 h-4 text-white relative z-10 shadow-black drop-shadow-md" />
+          <ArrowUpRight className="w-5 h-5 text-white relative z-10 shadow-black drop-shadow-md" />
         </Link>
       </motion.div>
 

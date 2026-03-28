@@ -26,7 +26,7 @@ const config: Config = {
         border: "rgb(var(--border-color) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["'DM Sans'", "sans-serif"],
         display: ["var(--font-sora)", "sans-serif"],
       },
       backgroundImage: {

@@ -104,7 +104,7 @@ export function PricingSection() {
               <p className="text-sm text-white/50 mb-8 border-b border-white/5 pb-8">{plan.description}</p>
               
               <button 
-                className={`w-full py-3.5 rounded-full font-bold text-sm transition-all mb-8 ${
+                className={`w-full py-4 rounded-full font-bold text-[16px] transition-all mb-8 ${
                   plan.highlight
                     ? "bg-gradient-to-r from-primary to-accent text-white shadow-[0_4px_20px_rgba(168,85,247,0.3)] hover:opacity-90"
                     : "bg-white/5 text-white hover:bg-white/10"

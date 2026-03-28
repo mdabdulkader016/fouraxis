@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "What services does Syntaxview provide?",
+    question: "What services does Fouraxis provide?",
     answer: "We offer Web Development, App Development, UX/UI Design, and Graphics Design — helping businesses build digital products and visual experiences from strategy to execution.",
   },
   {
     question: "Can you handle both design and development?",
-    answer: "Yes. Syntaxview combines design and development in one streamlined workflow, allowing us to move efficiently from concept to launch while maintaining consistency.",
+    answer: "Yes. Fouraxis combines design and development in one streamlined workflow, allowing us to move efficiently from concept to launch while maintaining consistency.",
   },
   {
     question: "Do you work with startups and established businesses?",

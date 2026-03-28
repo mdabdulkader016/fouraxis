@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Syntaxview brought clarity to our product vision and delivered a polished website that felt premium from day one.",
+    quote: "Fouraxis brought clarity to our product vision and delivered a polished website that felt premium from day one.",
     author: "Founder",
     company: "SaaS Startup",
     avatar: "/avatars/1.png"
@@ -17,7 +17,7 @@ const testimonials = [
     avatar: "/avatars/2.png"
   },
   {
-    quote: "We needed design and development under one roof — Syntaxview handled both seamlessly.",
+    quote: "We needed design and development under one roof — Fouraxis handled both seamlessly.",
     author: "Marketing Manager",
     company: "Growing Business",
     avatar: "/avatars/3.png"

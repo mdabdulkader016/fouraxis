@@ -79,8 +79,8 @@ export function ServicesSection() {
                 <h3 className="text-2xl font-display font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-muted leading-relaxed mb-8 flex-1">{service.description}</p>
                 
-                <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-white/50 group-hover:text-accent transition-colors cursor-pointer">
-                  Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="mt-auto flex items-center gap-2.5 text-[16px] font-semibold text-white/50 group-hover:text-accent transition-colors cursor-pointer">
+                  Learn more <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1.5 transition-transform" />
                 </div>
               </motion.div>
             );
@@ -95,7 +95,7 @@ export function ServicesSection() {
         >
           <Link
             href="#contact"
-            className="px-8 py-3.5 bg-gradient-to-r from-primary to-accent text-white text-sm font-semibold rounded-full hover:opacity-90 transition-all shadow-[0_4px_20px_rgba(168,85,247,0.3)]"
+            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white text-[16px] font-bold rounded-full hover:opacity-90 transition-all shadow-[0_4px_20px_rgba(168,85,247,0.3)]"
           >
             Get Started
           </Link>

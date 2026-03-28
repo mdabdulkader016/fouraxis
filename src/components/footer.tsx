@@ -12,7 +12,7 @@ export function Footer() {
                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center">
                  <Rocket className="w-4 h-4 text-white" />
                </div>
-               <span className="text-xl font-bold tracking-tight text-white">Syntaxview</span>
+               <span className="text-xl font-bold tracking-tight text-white">Fouraxis</span>
             </Link>
             <p className="text-white/40 leading-relaxed mb-8 max-w-sm text-sm">
               Helping businesses build digital products and visual experiences from strategy to execution.
@@ -42,7 +42,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h4 className="font-bold text-white mb-6 tracking-wide">Contact</h4>
             <ul className="space-y-4 text-sm font-medium text-white/50">
-              <li>hello@syntaxview.com</li>
+              <li>hello@fouraxis.com</li>
               <li>+1 (555) 000-0000</li>
             </ul>
           </div>
@@ -51,7 +51,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm font-medium text-white/40">
-            © 2026 Syntaxview. All rights reserved.
+            © 2026 Fouraxis. All rights reserved.
           </p>
           <div className="text-sm font-medium text-white/40 flex gap-4">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

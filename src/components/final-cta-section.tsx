@@ -35,7 +35,7 @@ export function FinalCtaSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl font-display font-bold leading-tight mb-8 text-white tracking-tight"
         >
-          Get started with Syntaxview today
+          Get started with Fouraxis today
         </motion.h2>
 
         <motion.p
@@ -57,7 +57,7 @@ export function FinalCtaSection() {
         >
           <Link
             href="#contact"
-            className="px-10 py-5 bg-gradient-to-r from-primary to-accent text-white text-lg font-bold rounded-full hover:opacity-90 transition-all shadow-[0_4px_30px_rgba(236,72,153,0.3)] hover:shadow-[0_4px_40px_rgba(236,72,153,0.5)] flex items-center gap-3"
+            className="px-9 py-4.5 bg-gradient-to-r from-primary to-accent text-white text-[16px] font-bold rounded-full hover:opacity-90 transition-all shadow-[0_4px_30px_rgba(236,72,153,0.3)] hover:shadow-[0_4px_40px_rgba(236,72,153,0.5)] flex items-center gap-3"
           >
             Start Your Project <ArrowRight className="w-5 h-5" />
           </Link>

@@ -40,10 +40,13 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
             className="order-1 lg:order-2 flex flex-col items-start"
           >
-            {/* Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-[#160f24] text-xs font-medium text-white/70 mb-8 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/50" />
-              About Syntaxview
+            <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-semibold text-white mb-8 overflow-hidden group shadow-xl">
+              {/* Premium Top Glow Effect (Brand Blue) */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
+              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />
+              
+              <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0 shadow-[0_0_10px_rgba(255,255,255,0.9)]" />
+              <span className="tracking-tight relative z-10 text-white">About Fouraxis</span>
             </div>
 
             {/* Headings */}
@@ -77,7 +80,7 @@ export function AboutSection() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
               <Link
                 href="#about-more"
-                className="px-7 py-3.5 bg-[#5E00FF] text-white text-[14px] font-medium rounded-2xl hover:bg-[#4b00cc] transition-all shadow-[0_0_20px_rgba(94,0,255,0.4)] flex items-center justify-center relative overflow-hidden"
+                className="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-semibold rounded-2xl hover:bg-[#4b00cc] transition-all shadow-[0_0_20px_rgba(94,0,255,0.4)] flex items-center justify-center relative overflow-hidden"
               >
                 <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
                 <span className="relative z-10">View About Us</span>

@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 
 export const metadata: Metadata = {
-  title: "Syntaxview | Web, App, UX/UI & Graphics Design Solutions",
-  description: "Syntaxview delivers premium web development, app development, UX/UI design, and graphics design services for businesses that want modern digital experiences that perform.",
+  title: "Fouraxis | Web, App, UX/UI & Graphics Design Solutions",
+  description: "Fouraxis delivers premium web development, app development, UX/UI design, and graphics design services for businesses that want modern digital experiences that perform.",
 };
 
 export default function RootLayout({
@@ -18,8 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+      </head>
       <body
-        className={`${inter.variable} ${sora.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}
+        className={`${sora.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}
       >
         <Providers>
           {children}
