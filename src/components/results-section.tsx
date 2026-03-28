@@ -120,21 +120,30 @@ export function ResultsSection() {
         transition={{ duration: 0.8 }}
         className="relative container mx-auto px-4 md:px-8 text-center mb-16 overflow-hidden"
       >
-        {/* Left Shape — bigger, clipped by overflow-hidden */}
-        <img
-          src="/Rectangle 19.svg"
-          alt=""
-          className="absolute left-0 top-[58%] h-[80%] w-auto max-w-[30%] pointer-events-none hidden lg:block select-none"
-        />
+        {/* Brand SVG Reflections — framing the header */}
+        <div className="absolute top-[10%] left-0 -translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-30 lg:opacity-50">
+          <img 
+            src="/Rectangle 19.svg" 
+            alt="" 
+            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            style={{ 
+              maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
+            }}
+          />
+        </div>
 
-        {/* Right Shape — mirrored, same constraints */}
-        <img
-          src="/Rectangle 19.svg"
-          alt=""
-          className="absolute right-0 top-[58%] h-[80%] w-auto max-w-[30%] pointer-events-none hidden lg:block select-none"
-          style={{ transform: "scaleX(-1)" }}
-        />
-
+        <div className="absolute top-[10%] right-0 translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-30 lg:opacity-50 -scale-x-100">
+          <img 
+            src="/Rectangle 19.svg" 
+            alt="" 
+            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            style={{ 
+              maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
+            }}
+          />
+        </div>
         {/* Badge */}
         <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden shadow-xl z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
@@ -143,7 +152,7 @@ export function ResultsSection() {
           <span className="tracking-tight relative z-10 text-white">Results</span>
         </div>
 
-        <h2 className="relative z-10 text-4xl md:text-[3rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl mx-auto">
+        <h2 className="relative z-10 text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-6 max-w-4xl mx-auto">
           <span className="text-white block">Delivering Tangible Results</span>
           <span className="text-white/40 block">That Propel Your Success</span>
         </h2>

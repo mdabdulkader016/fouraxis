@@ -51,7 +51,7 @@ export function AboutSection() {
             </div>
 
             {/* Headings */}
-            <h2 className="text-4xl md:text-[2.8rem] font-display font-medium leading-[1.1] tracking-tight mb-6">
+            <h2 className="text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight mb-8">
               <span className="text-white block mb-1">Building Stronger Brands</span>
               <span className="text-white/40 block">Creating Impressions!</span>
             </h2>

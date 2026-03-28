@@ -11,6 +11,7 @@ import { PortfolioPreview } from "@/components/portfolio-preview";
 import { PricingSection } from "@/components/pricing-section";
 import { FaqSection } from "@/components/faq-section";
 import { FinalCtaSection } from "@/components/final-cta-section";
+import { BlogSection } from "@/components/blog-section";
 import { Footer } from "@/components/footer";
 import { ScrollFocusWrapper } from "@/components/scroll-focus-wrapper";
 
@@ -27,11 +28,12 @@ export default function Home() {
       <AboutSection />
       <ProcessSection />
       <ResultsSection />
+      <BlogSection />
+      <PortfolioPreview />
       <ServicesSection />
       <TestimonialsSection />
       <CapabilitiesGrid />
       <WhyChooseSection />
-      <PortfolioPreview />
       <PricingSection />
       <FaqSection />
       <FinalCtaSection />

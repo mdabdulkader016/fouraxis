@@ -56,21 +56,20 @@ export function PricingSection() {
       <div className="container mx-auto px-4 md:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
-            <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent text-xs font-bold tracking-wide uppercase mb-6"
-           >
-            Pricing
-          </motion.div>
+          <div className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[16px] font-light text-white mb-8 overflow-hidden shadow-xl z-10">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,85,254)] to-transparent z-10" />
+            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />
+            <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0" />
+            <span className="tracking-tight relative z-10 text-white">Pricing</span>
+          </div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-display font-bold text-white leading-tight"
+            className="text-4xl md:text-[3.5rem] font-display font-medium leading-[1.1] tracking-tight text-white"
           >
-            Choose the Right Plan For Your Business
+            <span className="text-white block">Choose the Right Plan</span>
+            <span className="text-white/40 block">For Your Business</span>
           </motion.h2>
         </div>
 
