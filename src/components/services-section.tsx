@@ -79,7 +79,7 @@ export function ServicesSection() {
                 <h3 className="text-2xl font-display font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-muted leading-relaxed mb-8 flex-1">{service.description}</p>
                 
-                <div className="mt-auto flex items-center gap-2.5 text-[16px] font-semibold text-white/50 group-hover:text-accent transition-colors cursor-pointer">
+                <div className="mt-auto flex items-center gap-2.5 text-[16px] font-light text-white/50 group-hover:text-accent transition-colors cursor-pointer">
                   Learn more <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1.5 transition-transform" />
                 </div>
               </motion.div>

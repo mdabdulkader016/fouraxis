@@ -19,7 +19,7 @@ export function Navbar() {
   return (
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
       <div className="bg-[#0a0514]/70 backdrop-blur-2xl border border-white/10 rounded-full pl-6 pr-3 py-2.5 flex items-center justify-between shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] relative">
-        
+
         {/* Logo */}
         <Link href="/" className="flex items-center z-10 shrink-0 ml-2">
           <img src="/Logo.png" alt="Logo" className="h-8 max-w-[120px] object-contain brightness-0 invert" />
@@ -34,9 +34,8 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setActiveItem(link.name)}
-                className={`relative text-[16px] transition-colors ${
-                  isActive ? "text-white font-semibold" : "text-white/60 hover:text-white"
-                }`}
+                className={`relative text-[16px] transition-colors ${isActive ? "text-white font-light" : "text-white/60 hover:text-white"
+                  }`}
               >
                 {link.name}
                 {isActive && (
@@ -49,19 +48,19 @@ export function Navbar() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2 z-10 justify-end flex-1 ml-auto">
-          
+
           {/* WhatsApp Icon Button */}
-          <Link 
-            href="#whatsapp" 
+          <Link
+            href="#whatsapp"
             className="w-10 h-10 rounded-full border border-white bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors hidden md:flex shrink-0"
           >
-            <svg 
-              className="w-4 h-4 text-white" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <svg
+              className="w-4 h-4 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             >
               <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
@@ -72,7 +71,7 @@ export function Navbar() {
           {/* CTA Button */}
           <Link
             href="#contact"
-            className="px-6 py-3 rounded-full border border-white bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2.5 text-white text-[16px] font-semibold shrink-0"
+            className="px-6 py-3 rounded-full border border-white bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2.5 text-white text-[16px] font-light shrink-0"
           >
             <span>Get Started</span>
             <span className="text-white/30">•</span>
@@ -102,9 +101,8 @@ export function Navbar() {
                   setActiveItem(link.name);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`py-3 px-4 rounded-xl text-sm ${
-                  activeItem === link.name ? "bg-white/10 text-white" : "text-white/60"
-                }`}
+                className={`py-3 px-4 rounded-xl text-sm ${activeItem === link.name ? "bg-white/10 text-white" : "text-white/60"
+                  }`}
               >
                 {link.name}
               </Link>
