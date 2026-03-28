@@ -28,7 +28,7 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground transition-colors duration-300;
     background-color: rgb(var(--background));
     overflow-x: hidden;
   }
@@ -74,4 +74,11 @@ html.lenis, html.lenis body {
 }
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+/* Custom Cursor Hide Logic - Only on desktop/fine pointers */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
+import { CustomCursor } from "@/components/custom-cursor";
 
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         className={`${sora.variable} font-sans antialiased bg-background text-foreground`}
       >
         <Providers>
+          <CustomCursor />
           {children}
         </Providers>
       </body>
