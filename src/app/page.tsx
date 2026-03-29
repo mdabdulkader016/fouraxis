@@ -9,7 +9,6 @@ import { CtaSection } from "@/components/cta-section";
 import { BlogSection } from "@/components/blog-section";
 import { PortfolioPreview } from "@/components/portfolio-preview";
 import { TrustSection } from "@/components/trust-section";
-import { ScrollFocusWrapper } from "@/components/scroll-focus-wrapper";
 
 export default function Home() {
   return (

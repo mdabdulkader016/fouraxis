@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -28,7 +29,14 @@ export function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center z-10 shrink-0 ml-1 md:ml-2">
-          <img src="/Logo2.png" alt="Logo" className="h-7 md:h-8 max-w-[110px] object-contain" />
+          <Image 
+            src="/Logo2.png" 
+            alt="Logo" 
+            width={110}
+            height={32}
+            className="h-7 md:h-8 w-auto object-contain" 
+            priority
+          />
         </Link>
 
         {/* Desktop Nav Links — xl+ only, centered absolutely */}

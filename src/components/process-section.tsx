@@ -2,8 +2,20 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Rocket, LayoutGrid, ShieldCheck, ArrowRight } from "lucide-react";
+import { Rocket, LayoutGrid, ShieldCheck, ArrowRight, LucideIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface ProcessStage {
+  id: string;
+  stage: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  tags: string[];
+  color: string;
+  hasCTA?: boolean;
+}
 
 const stages = [
   {
@@ -36,7 +48,7 @@ const stages = [
   },
 ];
 
-function ProcessCard({ stage, index, total }: { stage: any; index: number; total: number }) {
+function ProcessCard({ stage, index }: { stage: ProcessStage; index: number }) {
   const Icon = stage.icon;
   const cardRef = useRef<HTMLDivElement>(null);
   
@@ -123,10 +135,11 @@ function ProcessCard({ stage, index, total }: { stage: any; index: number; total
 
         {/* Blur Logo Background Watermark - High End Branding */}
         <div className="absolute inset-x-0 -bottom-32 -right-32 w-[130%] h-[130%] pointer-events-none opacity-[0.03] group-hover:opacity-[0.05] transition-opacity duration-1000 rotate-12">
-          <img 
+          <Image 
             src="/blur logo.svg" 
             alt="Logo watermark" 
-            className="w-full h-full object-contain"
+            fill
+            className="object-contain"
           />
         </div>
 
@@ -206,7 +219,7 @@ export function ProcessSection() {
               {/* Cards Container */}
               <div className="relative pb-[60vh] flex flex-col items-center">
                 {stages.map((stage, index) => (
-                  <ProcessCard key={stage.id} stage={stage} index={index} total={stages.length} />
+                  <ProcessCard key={stage.id} stage={stage} index={index} />
                 ))}
               </div>
             </div>
@@ -222,10 +235,11 @@ export function ProcessSection() {
                 {/* Removed the straight bottom glowing line */}
 
                 <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
-                  <img 
+                  <Image 
                     src="/shamin-haky-RIk-i9rXPao-unsplash.jpg" 
                     alt="Process visualization" 
-                    className="w-full h-full object-cover transition-all duration-1000"
+                    fill
+                    className="object-cover transition-all duration-1000"
                   />
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0514] via-transparent to-transparent opacity-80" />

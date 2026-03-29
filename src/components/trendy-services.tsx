@@ -1,8 +1,19 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
-import { Cpu, Layers, Share2, Sparkles, Binary, CheckSquare } from "lucide-react";
+import { useRef } from "react";
+import { Cpu, Layers, Share2, Sparkles, Binary, CheckSquare, LucideIcon } from "lucide-react";
+import Image from "next/image";
+
+interface TrendyService {
+  title: string;
+  tagline: string;
+  description: string;
+  icon: LucideIcon;
+  image: string;
+  color: string;
+  glow: string;
+}
 
 const trendyServices = [
   {
@@ -52,7 +63,7 @@ const trendyServices = [
   },
 ];
 
-function TrendyServiceCard({ service, index }: { service: any; index: number }) {
+function TrendyServiceCard({ service, index }: { service: TrendyService; index: number }) {
   const cardRef = useRef<HTMLDivElement>(null);
   
   // Mouse tracking for 3D tilt effect
@@ -139,10 +150,11 @@ function TrendyServiceCard({ service, index }: { service: any; index: number }) 
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="relative aspect-video rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/5 bg-black"
         >
-          <img 
+          <Image 
             src={service.image} 
             alt={service.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
           {/* Subtle inner shadow to blend edges perfectly */}
           <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none z-30 opacity-50" />
@@ -182,7 +194,7 @@ export function TrendyServices() {
             Stay ahead with <span className="text-primary">Innovative Tech.</span>
           </motion.h2>
           <p className="mt-6 text-white/50 text-lg font-light max-w-2xl">
-            We don't just follow trends; we define them. Our specialized services leverage the most advanced technologies to scale your vision.
+            We don&apos;t just follow trends; we define them. Our specialized services leverage the most advanced technologies to scale your vision.
           </p>
         </div>
 

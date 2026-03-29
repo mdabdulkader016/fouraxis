@@ -3,6 +3,18 @@
 import { motion } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface Project {
+  id: string;
+  logo: string;
+  title: string;
+  description: string;
+  image: string;
+  metrics: string[];
+  badge?: string;
+  logoIcon?: boolean;
+}
 
 const projects = [
   {
@@ -50,15 +62,16 @@ const projects = [
   },
 ];
 
-function ResultCard({ project }: { project: any }) {
+function ResultCard({ project }: { project: Project }) {
   return (
     <div className="w-[280px] md:w-[380px] lg:w-[480px] shrink-0 group relative h-[380px] md:h-[420px] lg:h-[460px] rounded-[1.8rem] overflow-hidden border border-white/[0.1] bg-[#0a0a14] flex flex-col transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1.5">
       {/* Image — top portion */}
       <div className="relative h-[55%] overflow-hidden">
-        <img
+        <Image
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+          fill
+          className="object-cover transition-all duration-700 group-hover:scale-105"
         />
         {/* Subtle bottom fade from image into card */}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0a0a14] to-transparent" />
@@ -122,10 +135,11 @@ export function ResultsSection() {
       >
         {/* Brand SVG Reflections — framing the header */}
         <div className="absolute top-[10%] left-0 -translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-30 lg:opacity-50">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -134,10 +148,11 @@ export function ResultsSection() {
         </div>
 
         <div className="absolute top-[10%] right-0 translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-30 lg:opacity-50 -scale-x-100">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'

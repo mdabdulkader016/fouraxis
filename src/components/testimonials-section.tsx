@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote, ArrowRight } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -77,10 +78,11 @@ export function TestimonialsSection() {
       >
         {/* Brand SVG Reflections — framing (Consistent style) */}
         <div className="absolute top-[10%] left-0 -translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.2] lg:opacity-30">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="Decorative Frame" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -89,10 +91,11 @@ export function TestimonialsSection() {
         </div>
 
         <div className="absolute top-[10%] right-0 translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.2] lg:opacity-30 -scale-x-100">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="Decorative Frame" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -122,10 +125,13 @@ export function TestimonialsSection() {
           <div className="flex animate-logo-marquee gap-12 sm:gap-24 py-4 w-max px-8">
             {[...brands, ...brands, ...brands].map((brand, idx) => (
               <div key={idx} className="flex items-center gap-3 shrink-0">
-                <img 
+                <Image 
                   src={brand.logo} 
                   alt={brand.name} 
-                  className="w-8 h-8 object-contain"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                  unoptimized
                 />
                 <span className="font-display font-bold text-xl tracking-tight text-white uppercase italic">{brand.name}</span>
               </div>
@@ -181,7 +187,7 @@ export function TestimonialsSection() {
               {/* Avatar Layer */}
               <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white/10 p-0.5 bg-[#0b0514] shadow-xl">
-                   <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                   <Image src={t.avatar} alt={t.name} width={56} height={56} className="object-cover" unoptimized />
                 </div>
               </div>
 

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Star, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const techLogos = [
   { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
@@ -24,10 +25,13 @@ export function HeroSection() {
       {/* Exact Match Background Glows */}
       {/* Exact Match SVG Background */}
       <div className="absolute inset-0 pointer-events-none -z-30 overflow-hidden flex justify-center items-start">
-        <img 
+        <Image 
           src="/BG.svg" 
           alt="Hero Background" 
-          className="w-full h-full object-cover object-top opacity-90 mix-blend-screen"
+          fill
+          className="object-cover object-top opacity-90 mix-blend-screen"
+          priority
+          unoptimized
         />
       </div>
       
@@ -129,11 +133,11 @@ export function HeroSection() {
              }}
              className="flex items-center w-max"
           >
-             {[...techLogos, ...techLogos].map((tool, index) => (
+              {[...techLogos, ...techLogos].map((tool, index) => (
                 <div key={`${tool.name}-${index}`} className="flex items-center justify-center w-[100px] opacity-70 hover:opacity-100 transition-opacity">
-                   <img src={tool.logo} alt={tool.name} title={tool.name} className="h-8 md:h-11 w-auto object-contain brightness-150" />
+                   <Image src={tool.logo} alt={tool.name} title={tool.name} width={44} height={44} className="h-8 md:h-11 w-auto object-contain brightness-150" unoptimized />
                 </div>
-             ))}
+              ))}
           </motion.div>
         </div>
       </motion.div>

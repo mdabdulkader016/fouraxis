@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ServiceShowcase } from "@/components/service-showcase";
 import { TrendyServices } from "@/components/trendy-services";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 const detailedServices = [
   {
@@ -50,10 +51,12 @@ export default function ServicesPage() {
         
         {/* Exact Match Background Layers (Scoped to Hero Section) */}
         <div className="absolute inset-0 pointer-events-none -z-30 overflow-hidden flex justify-center items-start">
-          <img 
+          <Image 
             src="/BG.svg" 
             alt="Hero Background" 
-            className="w-full h-full object-cover object-top opacity-90 mix-blend-screen"
+            fill
+            className="object-cover object-top opacity-90 mix-blend-screen"
+            priority
           />
         </div>
         
@@ -62,10 +65,11 @@ export default function ServicesPage() {
 
         {/* Brand SVG Reflections — framing the header */}
         <div className="absolute top-0 left-0 -translate-x-[30%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-20 lg:opacity-40 z-0">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -74,10 +78,11 @@ export default function ServicesPage() {
         </div>
 
         <div className="absolute top-0 right-0 translate-x-[30%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-20 lg:opacity-40 -scale-x-100 z-0">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'

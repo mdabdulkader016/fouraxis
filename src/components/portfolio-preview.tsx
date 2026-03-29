@@ -4,6 +4,15 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  color: string;
+}
 
 const projects = [
   {
@@ -50,7 +59,7 @@ const projects = [
   },
 ];
 
-function PortfolioCard({ project, index, total }: { project: any; index: number; total: number }) {
+function PortfolioCard({ project, index }: { project: Project; index: number }) {
   const cardRef = useRef<HTMLDivElement>(null);
   
   // Create scroll-linked transform for the "stacking" effect
@@ -85,10 +94,11 @@ function PortfolioCard({ project, index, total }: { project: any; index: number;
 
           {/* Main Visual Container */}
           <div className="relative aspect-[16/10] md:aspect-[21/11] overflow-hidden">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
             
             {/* Deep Cinematic Overlay for text readability - Darkened as requested */}
@@ -133,10 +143,12 @@ export function PortfolioPreview() {
     <section id="portfolio" ref={containerRef} className="py-24 relative bg-[#0b0514]">
       {/* Brand SVG Reflections — Precision-positioned to frame the header text */}
       <div className="absolute top-10 left-1/2 -translate-x-[640px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6]">
-        <img 
+        <Image 
           src="/Rectangle 19.svg" 
           alt="" 
-          className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+          fill
+          className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+          unoptimized
           style={{ 
             maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
             WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -145,10 +157,11 @@ export function PortfolioPreview() {
       </div>
 
       <div className="absolute top-10 left-1/2 translate-x-[40px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6] -scale-x-100">
-        <img 
+        <Image 
           src="/Rectangle 19.svg" 
           alt="" 
-          className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+          fill
+          className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
           style={{ 
             maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
             WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -193,7 +206,6 @@ export function PortfolioPreview() {
               key={project.id} 
               project={project} 
               index={index} 
-              total={projects.length} 
             />
           ))}
         </div>

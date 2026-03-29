@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ServiceShowcaseProps {
   title: string;
@@ -91,10 +92,11 @@ export function ServiceShowcase({
               className="relative z-10 w-full max-w-md lg:max-w-none mx-auto rounded-3xl p-2 sm:p-4 border border-white/5 bg-white/[0.02]"
             >
               <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Subtle inner shadow to blend edges */}
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none z-30" />

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const tools = [
   { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
@@ -34,10 +35,13 @@ export function TrustedBy() {
             className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#181325] border border-white/5 flex items-center justify-center hover:bg-white/5 hover:border-white/20 transition-all shadow-[0_0_15px_rgba(0,0,0,0.5)] cursor-default"
             title={tool.name}
           >
-            <img 
+            <Image 
               src={tool.logo} 
               alt={tool.name} 
+              width={32}
+              height={32}
               className="w-6 h-6 md:w-8 md:h-8 object-contain opacity-90 brightness-110" 
+              unoptimized
             />
           </motion.div>
         ))}

@@ -2,8 +2,21 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Monitor, Smartphone, Palette, Image as ImageIcon, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Monitor, Smartphone, Palette, Image as ImageIcon, ArrowRight, CheckCircle2, LucideIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface Service {
+  id: string;
+  category: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  price: string;
+  duration: string;
+  features: string[];
+  color: string;
+}
 
 const services = [
   {
@@ -52,7 +65,7 @@ const services = [
   },
 ];
 
-function ServiceCard({ service, index, total }: { service: any; index: number; total: number }) {
+function ServiceCard({ service, index }: { service: Service; index: number }) {
   const Icon = service.icon;
   const cardRef = useRef<HTMLDivElement>(null);
   
@@ -136,10 +149,11 @@ function ServiceCard({ service, index, total }: { service: any; index: number; t
         </div>
 
         <div className="absolute inset-x-0 -bottom-32 -right-32 w-[130%] h-[130%] pointer-events-none opacity-[0.03] group-hover:opacity-[0.05] transition-opacity duration-1000 rotate-12">
-          <img 
+          <Image 
             src="/blur logo.svg" 
             alt="Logo watermark" 
-            className="w-full h-full object-contain"
+            fill
+            className="object-contain"
           />
         </div>
 
@@ -190,10 +204,11 @@ export function ApproachSection() {
                 <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.6)_0%,transparent_70%)] blur-3xl pointer-events-none -z-10 animate-pulse-slow" />
                 
                 <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
-                  <img 
+                  <Image 
                     src="/shamin-haky-RIk-i9rXPao-unsplash.jpg" 
                     alt="Our Services visualization" 
-                    className="w-full h-full object-cover transition-all duration-1000"
+                    fill
+                    className="object-cover transition-all duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0514] via-transparent to-transparent opacity-80" />
                   <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none z-30" />
@@ -228,7 +243,7 @@ export function ApproachSection() {
 
               <div className="relative pb-[60vh] flex flex-col items-center">
                 {services.map((service, index) => (
-                  <ServiceCard key={service.id} service={service} index={index} total={services.length} />
+                  <ServiceCard key={service.id} service={service} index={index} />
                 ))}
               </div>
             </div>

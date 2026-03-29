@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const row1Images = [
   "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
@@ -35,10 +36,12 @@ export function TrustSection() {
       >
         {/* Brand SVG Reflections — mirroring framing (from side to both) */}
         <div className="absolute top-[10%] left-0 -translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.25] lg:opacity-40">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="Decorative Frame" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            unoptimized
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -47,10 +50,12 @@ export function TrustSection() {
         </div>
 
         <div className="absolute top-[10%] right-0 translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.25] lg:opacity-40 -scale-x-100">
-          <img 
+          <Image 
             src="/Rectangle 19.svg" 
             alt="Decorative Frame" 
-            className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            fill
+            className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+            unoptimized
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
               WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -96,12 +101,13 @@ export function TrustSection() {
             {[...row1Images, ...row1Images, ...row1Images].map((src, idx) => (
               <div 
                 key={`row1-${idx}`}
-                className="w-[260px] h-[180px] md:w-[420px] md:h-[280px] rounded-[2rem] overflow-hidden border border-white/10 bg-[#0a0a14] shrink-0"
+                className="relative w-[260px] h-[180px] md:w-[420px] md:h-[280px] rounded-[2rem] overflow-hidden border border-white/10 bg-[#0a0a14] shrink-0"
               >
-                <img 
+                <Image 
                   src={src} 
                   alt="Technology" 
-                  className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
+                  fill
+                  className="object-cover transition-all duration-700 hover:scale-105"
                 />
               </div>
             ))}
@@ -114,12 +120,13 @@ export function TrustSection() {
             {[...row2Images, ...row2Images, ...row2Images].map((src, idx) => (
               <div 
                 key={`row2-${idx}`}
-                className="w-[260px] h-[180px] md:w-[420px] md:h-[280px] rounded-[2rem] overflow-hidden border border-white/10 bg-[#0a0a14] shrink-0"
+                className="relative w-[260px] h-[180px] md:w-[420px] md:h-[280px] rounded-[2rem] overflow-hidden border border-white/10 bg-[#0a0a14] shrink-0"
               >
-                <img 
+                <Image 
                   src={src} 
                   alt="Experience" 
-                  className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
+                  fill
+                  className="object-cover transition-all duration-700 hover:scale-105"
                 />
               </div>
             ))}

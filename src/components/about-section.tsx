@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Star } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
@@ -22,10 +23,11 @@ export function AboutSection() {
             {/* Outline Frame & Image container */}
             <div className="relative z-10 w-full max-w-md lg:max-w-none mx-auto rounded-3xl p-2 sm:p-4 border border-white/5 bg-white/[0.02]">
               <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
                   alt="Team working together"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Subtle inner shadow to blend edges */}
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none z-30" />

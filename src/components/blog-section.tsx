@@ -3,6 +3,18 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface BlogPost {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  gridClass: string;
+  hasButtons?: boolean;
+  badge?: string;
+}
 
 const blogPosts = [
   {
@@ -67,7 +79,7 @@ const categoriesRow2 = [
   "User-Friendly"
 ];
 
-function BlogCard({ post }: { post: any }) {
+function BlogCard({ post }: { post: BlogPost }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -77,10 +89,11 @@ function BlogCard({ post }: { post: any }) {
     >
       {/* Image Container with Blue Halo */}
       <div className={`relative overflow-hidden ${post.gridClass.includes('xl:row-span-2') ? "h-[200px] md:h-[260px] xl:h-[320px]" : "h-[180px] md:h-[220px]"}`}>
-        <img
+        <Image
           src={post.image}
           alt={post.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* Soft atmospheric blue bottom glow */}
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />

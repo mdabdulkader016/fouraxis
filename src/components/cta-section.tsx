@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function CtaSection() {
   return (
@@ -30,10 +31,11 @@ export function CtaSection() {
             }}
             className="absolute inset-x-0 -top-[20%] -bottom-[20%] w-[150%] h-[150%] -left-[25%] pointer-events-none opacity-80 mix-blend-screen"
           >
-            <img 
+            <Image 
               src="/GroupGradiant.svg" 
               alt="Animated Gradient Background" 
-              className="w-full h-full object-cover opacity-100 brightness-[1.5] contrast-[1.2]"
+              fill
+              className="object-cover opacity-100 brightness-[1.5] contrast-[1.2]"
             />
           </motion.div>
 

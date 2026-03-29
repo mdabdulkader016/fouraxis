@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, Rocket, ChevronUp, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   const [mounted, setMounted] = React.useState(false);
@@ -32,7 +33,13 @@ export function Footer() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center justify-center">
-              <img src="/Logo2.png" alt="Logo" className="h-8 object-contain" />
+              <Image 
+                src="/Logo2.png" 
+                alt="Logo" 
+                width={120}
+                height={32}
+                className="h-8 w-auto object-contain" 
+              />
             </Link>
 
             {/* Tagline */}
@@ -100,7 +107,7 @@ export function Footer() {
                   Ready for your next project?
                 </h4>
                 <p className="text-white/40 text-[14px] font-light leading-relaxed">
-                  Let's build something extraordinary together.
+                  Let&apos;s build something extraordinary together.
                 </p>
               </div>
               <Link
@@ -134,7 +141,13 @@ export function Footer() {
               {/* Column 1: Brand & Newsletter */}
               <div className="xl:col-span-4 space-y-10">
                 <Link href="/" className="flex items-center shrink-0">
-                  <img src="/Logo2.png" alt="Logo" className="h-8 max-w-[120px] object-contain" />
+                  <Image 
+                    src="/Logo2.png" 
+                    alt="Logo" 
+                    width={120}
+                    height={32}
+                    className="h-8 w-auto object-contain" 
+                  />
                 </Link>
 
                 <div className="flex items-start gap-3 text-white/50 text-[14px] font-light leading-relaxed max-w-[280px]">
@@ -190,7 +203,7 @@ export function Footer() {
                     Ready to start your next project?
                   </h4>
                   <p className="text-white/50 text-[15px] font-light leading-relaxed">
-                    Let's focus on building something extraordinary together.
+                    Let&apos;s focus on building something extraordinary together.
                   </p>
                 </div>
 
