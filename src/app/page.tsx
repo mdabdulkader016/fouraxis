@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { AboutSection } from "@/components/about-section";
 import { ProcessSection } from "@/components/process-section";
@@ -10,7 +9,6 @@ import { CtaSection } from "@/components/cta-section";
 import { BlogSection } from "@/components/blog-section";
 import { PortfolioPreview } from "@/components/portfolio-preview";
 import { TrustSection } from "@/components/trust-section";
-import { Footer } from "@/components/footer";
 import { ScrollFocusWrapper } from "@/components/scroll-focus-wrapper";
 
 export default function Home() {
@@ -21,7 +19,6 @@ export default function Home() {
         className="fixed bottom-0 left-0 right-0 h-40 pointer-events-none z-50 bg-gradient-to-t from-[#0b0514] via-[#0b0514]/80 to-transparent" 
       />
 
-      <Navbar />
       <HeroSection />
       <AboutSection />
       <ProcessSection />
@@ -33,7 +30,6 @@ export default function Home() {
       <TestimonialsSection />
       <FaqSection />
       <CtaSection />
-      <Footer />
     </main>
   );
 }

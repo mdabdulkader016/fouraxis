@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +36,9 @@ export default function RootLayout({
       >
         <Providers>
           <CustomCursor />
+          <Navbar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

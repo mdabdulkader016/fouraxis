@@ -4,21 +4,21 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Services", href: "#services" },
-  { name: "Our Work", href: "#work" },
-  { name: "Reviews", href: "#reviews" },
-  { name: "Contact us", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Our Work", href: "/#work" },
+  { name: "Reviews", href: "/#reviews" },
+  { name: "Contact us", href: "/#contact" },
 ];
 
 export function Navbar() {
-  const [activeItem, setActiveItem] = useState("Home");
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleLinkClick = (name: string) => {
-    setActiveItem(name);
+  const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -33,24 +33,25 @@ export function Navbar() {
 
         {/* Desktop Nav Links — xl+ only, centered absolutely */}
         <nav className="hidden xl:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
-          {navLinks.map((link) => {
-            const isActive = activeItem === link.name;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => handleLinkClick(link.name)}
-                className={`relative text-[16px] transition-colors ${
-                  isActive ? "text-white font-light" : "text-white/60 hover:text-white"
-                }`}
-              >
-                {link.name}
-                {isActive && (
-                  <div className="absolute -bottom-[18px] left-0 right-0 h-[2px] bg-white/50 rounded-full" />
-                )}
-              </Link>
-            );
-          })}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
+              const commonClasses = `relative text-[16px] transition-colors ${
+                isActive ? "text-white font-light" : "text-white/60 hover:text-white"
+              }`;
+              const linkContent = (
+                <>{link.name}{isActive && (<div className="absolute -bottom-[18px] left-0 right-0 h-[2px] bg-white/50 rounded-full" />)}</>
+              );
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className={commonClasses}
+                >
+                  {linkContent}
+                </Link>
+              );
+            })}
         </nav>
 
         {/* Right Actions */}
@@ -105,9 +106,9 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={() => handleLinkClick(link.name)}
+                  onClick={handleLinkClick}
                   className={`py-3 px-4 rounded-2xl text-[15px] font-light transition-all ${
-                    activeItem === link.name
+                    (pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href)))
                       ? "bg-white/10 text-white"
                       : "text-white/60 hover:text-white hover:bg-white/5"
                   }`}
