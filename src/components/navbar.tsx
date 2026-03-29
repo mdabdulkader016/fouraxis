@@ -28,7 +28,7 @@ export function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center z-10 shrink-0 ml-1 md:ml-2">
-          <img src="/Logo.png" alt="Logo" className="h-7 md:h-8 max-w-[110px] object-contain brightness-0 invert" />
+          <img src="/Logo2.png" alt="Logo" className="h-7 md:h-8 max-w-[110px] object-contain" />
         </Link>
 
         {/* Desktop Nav Links — xl+ only, centered absolutely */}
