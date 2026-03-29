@@ -27,7 +27,6 @@ const services = [
     duration: "4 - 6 Week",
     features: ["Flutter Development", "Database and Back-End"],
     color: "from-indigo-600/20 to-indigo-400/5",
-    hasCTA: true,
   },
   {
     id: "service-3",
@@ -123,20 +122,18 @@ function ServiceCard({ service, index, total }: { service: any; index: number; t
           </div>
         </div>
 
-        {service.hasCTA && (
-          <div className="relative z-10">
-            <Link
-              href="#contact"
-              className="px-10 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 transition-all shadow-[0_0_30px_rgba(0,102,255,0.4)] flex items-center justify-center relative overflow-hidden w-fit group/btn active:scale-95"
-            >
-              <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
-              <span className="relative z-10 flex items-center gap-2">
-                Book an Appointment
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-          </div>
-        )}
+        <div className="relative z-10">
+          <Link
+            href="#contact"
+            className="px-10 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 transition-all shadow-[0_0_30px_rgba(0,102,255,0.4)] flex items-center justify-center relative overflow-hidden w-fit group/btn active:scale-95"
+          >
+            <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
+            <span className="relative z-10 flex items-center gap-2">
+              Book an Appointment
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+            </span>
+          </Link>
+        </div>
 
         <div className="absolute inset-x-0 -bottom-32 -right-32 w-[130%] h-[130%] pointer-events-none opacity-[0.03] group-hover:opacity-[0.05] transition-opacity duration-1000 rotate-12">
           <img 
