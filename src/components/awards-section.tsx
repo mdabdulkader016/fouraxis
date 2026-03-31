@@ -87,7 +87,7 @@ export function AwardsSection() {
                 </h2>
                 
                 <p className="text-white/50 text-[16px] leading-relaxed max-w-md font-light">
-                    Our commitment to design quality and technical precision has earned us accolades from the industry's most prestigious organizations.
+                    Our commitment to design quality and technical precision has earned us accolades from the industry&apos;s most prestigious organizations.
                 </p>
             </div>
 
