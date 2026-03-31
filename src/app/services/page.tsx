@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ServiceShowcase } from "@/components/service-showcase";
 import { TrendyServices } from "@/components/trendy-services";
-import { Star } from "lucide-react";
 import Image from "next/image";
 
 const detailedServices = [

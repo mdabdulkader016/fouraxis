@@ -205,7 +205,7 @@ export function ApproachSection() {
                 
                 <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/3] lg:aspect-square group bg-black">
                   <Image 
-                    src="/shamin-haky-RIk-i9rXPao-unsplash.jpg" 
+                    src="/abc.jpg" 
                     alt="Our Services visualization" 
                     fill
                     className="object-cover transition-all duration-1000"
