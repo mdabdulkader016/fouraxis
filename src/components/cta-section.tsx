@@ -19,22 +19,23 @@ export function CtaSection() {
           {/* Custom Branded Animated Gradient (GroupGradiant.svg) */}
           <motion.div
             animate={{
-              scale: [1.1, 1.5, 1.1],
-              rotate: [0, 12, -12, 0],
-              x: [-150, 150, -150],
-              y: [-80, 80, -80],
+              scale: [1, 1.4, 1.2, 1],
+              rotate: [0, 45, -45, 0],
+              x: [-100, 100, -50, 0],
+              y: [-100, 100, 50, 0],
             }}
             transition={{
-              duration: 20,
+              duration: 15,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "linear",
             }}
-            className="absolute inset-x-0 -top-[20%] -bottom-[20%] w-[150%] h-[150%] -left-[25%] pointer-events-none opacity-80 mix-blend-screen"
+            className="absolute inset-x-0 -top-[30%] -bottom-[30%] w-[160%] h-[160%] -left-[30%] pointer-events-none opacity-100 mix-blend-screen"
           >
             <Image 
               src="/GroupGradiant.svg" 
               alt="Animated Gradient Background" 
               fill
+              unoptimized
               className="object-cover opacity-100 brightness-[1.5] contrast-[1.2]"
             />
           </motion.div>

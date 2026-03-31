@@ -79,9 +79,10 @@ export function TestimonialsSection() {
         {/* Brand SVG Reflections — framing (Consistent style) */}
         <div className="absolute top-[10%] left-0 -translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.2] lg:opacity-30">
           <Image 
-            src="/Rectangle 19.svg" 
+            src="/rectangle-19.svg" 
             alt="Decorative Frame" 
             fill
+            unoptimized
             className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
@@ -92,9 +93,10 @@ export function TestimonialsSection() {
 
         <div className="absolute top-[10%] right-0 translate-x-[40%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.2] lg:opacity-30 -scale-x-100">
           <Image 
-            src="/Rectangle 19.svg" 
+            src="/rectangle-19.svg" 
             alt="Decorative Frame" 
             fill
+            unoptimized
             className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',

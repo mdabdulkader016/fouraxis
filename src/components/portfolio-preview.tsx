@@ -144,11 +144,11 @@ export function PortfolioPreview() {
       {/* Brand SVG Reflections — Precision-positioned to frame the header text */}
       <div className="absolute top-10 left-1/2 -translate-x-[640px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6]">
         <Image 
-          src="/Rectangle 19.svg" 
+          src="/rectangle-19.svg" 
           alt="" 
           fill
-          className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
           unoptimized
+          className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
           style={{ 
             maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
             WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
@@ -158,9 +158,10 @@ export function PortfolioPreview() {
 
       <div className="absolute top-10 left-1/2 translate-x-[40px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6] -scale-x-100">
         <Image 
-          src="/Rectangle 19.svg" 
+          src="/rectangle-19.svg" 
           alt="" 
           fill
+          unoptimized
           className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
           style={{ 
             maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
