@@ -46,29 +46,15 @@ const detailedServices = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen relative selection:bg-primary/30 bg-[#0b0514] overflow-x-clip w-full max-w-full">
-      {/* Page Header (Matches Homepage Hero Section) */}
-      <section className="relative flex flex-col items-center justify-center text-center min-h-[75vh] pt-32 pb-12 z-10 w-full px-4 overflow-hidden">
-        
-        {/* Exact Match Background Layers (Scoped to Hero Section) */}
-        <div className="absolute inset-0 pointer-events-none -z-30 overflow-hidden flex justify-center items-start">
+      {/* Page Header (Matches Portfolio Hero Section exactly) */}
+      <section className="pt-40 pb-20 relative bg-[#0b0514] overflow-hidden">
+        {/* Brand SVG Reflections — mirroring framing (consistent with site design) */}
+        <div className="absolute top-20 left-1/2 -translate-x-[640px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6]">
           <Image 
-            src="/BG.svg" 
-            alt="Hero Background" 
-            fill
-            className="object-cover object-top opacity-90 mix-blend-screen"
-            priority
-          />
-        </div>
-        
-        {/* Bottom fade for seamless blending into the next section */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0b0514] to-transparent pointer-events-none -z-20" />
-
-        {/* Brand SVG Reflections — framing the header */}
-        <div className="absolute top-0 left-0 -translate-x-[30%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-20 lg:opacity-40 z-0">
-          <Image 
-            src="/Rectangle 19.svg" 
+            src="/rectangle-19.svg" 
             alt="" 
             fill
+            unoptimized
             className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
@@ -77,11 +63,12 @@ export default function ServicesPage() {
           />
         </div>
 
-        <div className="absolute top-0 right-0 translate-x-[30%] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-20 lg:opacity-40 -scale-x-100 z-0">
+        <div className="absolute top-20 left-1/2 translate-x-[40px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6] -scale-x-100">
           <Image 
-            src="/Rectangle 19.svg" 
+            src="/rectangle-19.svg" 
             alt="" 
             fill
+            unoptimized
             className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
             style={{ 
               maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
@@ -90,46 +77,45 @@ export default function ServicesPage() {
           />
         </div>
 
-        <div className="flex flex-col items-center w-full relative z-10">
-          
-          {/* Top Pill with Lines - Matching Homepage */}
-          <div className="flex items-center gap-4 mb-6 w-full max-w-3xl mx-auto px-4 relative z-10">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#581c87] to-[#d8b4fe] flex-1 opacity-50" />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full border border-[#a855f7]/40 bg-[#160f24]/80 backdrop-blur-md shrink-0"
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="text-center flex flex-col items-center">
+            {/* Badge - Standardized Style matching Portfolio */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-[#0b0514] text-[15px] font-light text-white mb-10 overflow-hidden shadow-xl"
             >
-              <Star className="w-4 h-4 text-white" fill="currentColor" />
-              <span className="text-[16px] font-light tracking-wide text-white">Our Elite Services Portfolio</span>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-[1.5px] bg-gradient-to-r from-transparent via-[rgb(0,102,254)] to-transparent z-10" />
+              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-[rgb(0,85,254)]/20 blur-md rounded-full pointer-events-none" />
+              <div className="w-8 h-4 bg-blue-600 rounded-md flex items-center justify-center text-[10px] font-bold mr-1">SERVICES</div>
+              <span className="tracking-tight relative z-10 text-white/90">Our Elite Services Portfolio</span>
             </motion.div>
-            <div className="h-px bg-gradient-to-l from-transparent via-[#581c87] to-[#d8b4fe] flex-1 opacity-50" />
+
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-[2.5rem] md:text-[4.5rem] font-display font-medium leading-[1.1] tracking-tight mb-8 max-w-5xl"
+            >
+              <span className="text-white block">We provide the <span className="italic text-[#ccff38]">best service</span></span>
+              <span className="text-white/90 block">for your business growth.</span>
+            </motion.h1>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-white/50 text-[16px] md:text-[18px] max-w-2xl mx-auto font-light leading-relaxed mb-12"
+            >
+              Transforming ideas into high-end digital realities with precision <br className="hidden md:block" /> engineering and strategic visual design.
+            </motion.p>
           </div>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-[2.5rem] md:text-[3.6rem] lg:text-[4.5rem] font-display font-medium leading-[1.05] tracking-tight text-white relative z-10 mx-auto px-4 shadow-black drop-shadow-md flex flex-col items-center w-full"
-          >
-            <span className="text-center block">
-              We provide the <span className="italic text-[rgb(204,255,56)]">best service</span>
-            </span>
-            <span className="text-center block" style={{ marginTop: '-0.1em' }}>
-              for your business growth.
-            </span>
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[15px] md:text-[1.1rem] text-white/50 mt-6 mb-10 max-w-[600px] mx-auto px-4 font-normal leading-relaxed tracking-wide z-10 text-center"
-          >
-            Transforming ideas into high-end digital realities with precision engineering and strategic visual design.
-          </motion.p>
         </div>
+
+        {/* Background Cinematic Glows */}
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-blue-600/10 blur-[180px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-purple-600/10 blur-[180px] rounded-full pointer-events-none" />
       </section>
 
       {/* Detailed Service Showcases */}

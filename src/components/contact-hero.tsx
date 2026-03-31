@@ -1,6 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function ContactHero() {
   const scrollToForm = () => {
@@ -12,6 +11,35 @@ export function ContactHero() {
 
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#0b0514]">
+      {/* Brand SVG Reflections — mirroring framing (consistent with site design) */}
+      <div className="absolute top-20 left-1/2 -translate-x-[640px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6]">
+        <Image 
+          src="/rectangle-19.svg" 
+          alt="" 
+          fill
+          unoptimized
+          className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+          style={{ 
+            maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
+            WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
+          }}
+        />
+      </div>
+
+      <div className="absolute top-20 left-1/2 translate-x-[40px] w-[600px] h-[400px] pointer-events-none overflow-hidden select-none opacity-[0.35] lg:opacity-[0.6] -scale-x-100">
+        <Image 
+          src="/rectangle-19.svg" 
+          alt="" 
+          fill
+          unoptimized
+          className="object-contain filter drop-shadow-[0_0_15px_rgba(0,102,254,0.3)]"
+          style={{ 
+            maskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)',
+            WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 80%)'
+          }}
+        />
+      </div>
+
       {/* Cinematic Ambient Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.15)_0%,transparent_70%)] blur-[100px] pointer-events-none -translate-y-1/2" />
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.1)_0%,transparent_70%)] blur-[80px] pointer-events-none" />
