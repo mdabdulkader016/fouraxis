@@ -59,7 +59,7 @@ const checkActive = (href) => {
         <!-- WhatsApp Icon — xl+ only -->
         <a
           href="#whatsapp"
-          class="w-10 h-10 rounded-full border border-white bg-white/5 items-center justify-center hover:bg-white/10 hover:scale-105 hover:-translate-y-0.5 transition-all hidden xl:flex shrink-0"
+          class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20bd5c] hover:scale-105 hover:-translate-y-0.5 transition-all hidden xl:flex shrink-0 shadow-lg shadow-[#25D366]/20"
         >
           <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />

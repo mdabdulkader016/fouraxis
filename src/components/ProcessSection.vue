@@ -46,7 +46,6 @@ onMounted(() => {
   cardRefs.value.forEach((cardEl) => {
     gsap.to(cardEl, {
       scale: 0.92,
-      opacity: 0.6,
       ease: "none",
       scrollTrigger: {
         trigger: cardEl,
@@ -57,30 +56,7 @@ onMounted(() => {
     })
   })
 
-  // Setup right visual opacity based on overall container scroll
-  gsap.fromTo(rightVisualRef.value, 
-    { opacity: 0.4 },
-    {
-      opacity: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: containerRef.value,
-        start: "start center",
-        end: "center center",
-        scrub: true,
-      }
-    }
-  )
-  gsap.to(rightVisualRef.value, {
-    opacity: 0.4,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      trigger: containerRef.value,
-      start: "center center",
-      end: "bottom center",
-      scrub: true,
-    }
-  })
+
 })
 </script>
 
