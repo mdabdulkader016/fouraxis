@@ -46,7 +46,7 @@ const infoCards = [
           <form class="space-y-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-8">
               <div class="space-y-3">
-                <label class="text-white/70 text-[14px] font-light ml-2 uppercase tracking-widest">First Name*</label>
+                <label class="text-white/70 text-[14px] font-light ml-2">First Name*</label>
                 <input
                   type="text"
                   placeholder="Enter your first name"
@@ -55,7 +55,7 @@ const infoCards = [
                 />
               </div>
               <div class="space-y-3">
-                <label class="text-white/70 text-[14px] font-light ml-2 uppercase tracking-widest">Last Name*</label>
+                <label class="text-white/70 text-[14px] font-light ml-2">Last Name*</label>
                 <input
                   type="text"
                   placeholder="Enter your last name"
@@ -66,7 +66,7 @@ const infoCards = [
             </div>
 
             <div class="space-y-3">
-              <label class="text-white/70 text-[14px] font-light ml-2 uppercase tracking-widest">How can we reach you?*</label>
+              <label class="text-white/70 text-[14px] font-light ml-2">How can we reach you?*</label>
               <input
                 type="email"
                 placeholder="name@email.com"
@@ -77,9 +77,9 @@ const infoCards = [
 
             <div class="grid md:grid-cols-2 gap-8">
               <div class="space-y-3">
-                <label class="text-white/70 text-[14px] font-light ml-2 uppercase tracking-widest">Where are you from?*</label>
+                <label class="text-white/70 text-[14px] font-light ml-2">Where are you from?*</label>
                 <div class="relative">
-                    <select class="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/[0.03] text-white focus:border-blue-500/50 focus:bg-white/[0.05] transition-all outline-none font-light appearance-none">
+                    <select class="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/[0.03] text-white focus:border-blue-500/50 focus:bg-white/[0.05] transition-all outline-none font-light appearance-none" style="color-scheme: dark;">
                       <option value="" disabled selected>Select your country...</option>
                       <option value="usa">United States</option>
                       <option value="uk">United Kingdom</option>
@@ -89,9 +89,9 @@ const infoCards = [
                 </div>
               </div>
               <div class="space-y-3">
-                <label class="text-white/70 text-[14px] font-light ml-2 uppercase tracking-widest">What's the type of your company?*</label>
+                <label class="text-white/70 text-[14px] font-light ml-2">What's the type of your company?*</label>
                 <div class="relative">
-                    <select class="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/[0.03] text-white focus:border-blue-500/50 focus:bg-white/[0.05] transition-all outline-none font-light appearance-none">
+                    <select class="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/[0.03] text-white focus:border-blue-500/50 focus:bg-white/[0.05] transition-all outline-none font-light appearance-none" style="color-scheme: dark;">
                       <option value="" disabled selected>Select Category...</option>
                       <option value="startup">Startup</option>
                       <option value="agency">Agency</option>
@@ -103,7 +103,7 @@ const infoCards = [
             </div>
 
             <div class="space-y-3">
-              <label class="text-white/70 text-[14px] font-light ml-2 uppercase tracking-widest">Message*</label>
+              <label class="text-white/70 text-[14px] font-light ml-2">Message*</label>
               <textarea
                 rows="6"
                 placeholder="Tell us about your project or inquiry..."
