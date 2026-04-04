@@ -170,3 +170,13 @@ const infoCards = [
     </div>
   </section>
 </template>
+<style scoped>
+select option {
+  background-color: #0c0c1e;
+  color: white;
+}
+/* Ensure the dropdown itself uses the dark scheme for mobile/OS popups */
+select {
+  color-scheme: dark;
+}
+</style>
