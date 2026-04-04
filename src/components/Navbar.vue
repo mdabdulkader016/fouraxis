@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { ArrowUpRight, Menu, X } from 'lucide-vue-next'
+import { CONTACT_DETAILS } from '@/lib/constants'
 
 const route = useRoute()
 const isMobileMenuOpen = ref(false)
@@ -58,7 +59,9 @@ const checkActive = (href) => {
 
         <!-- WhatsApp Icon — xl+ only -->
         <a
-          href="#whatsapp"
+          :href="CONTACT_DETAILS.whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
           class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center hover:bg-[#20bd5c] hover:scale-105 hover:-translate-y-0.5 transition-all hidden xl:flex shrink-0 shadow-lg shadow-[#25D366]/20"
         >
           <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

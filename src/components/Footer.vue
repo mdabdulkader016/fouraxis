@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { MapPin, Rocket, ChevronUp, ArrowUpRight } from 'lucide-vue-next'
+import { CONTACT_DETAILS } from '@/lib/constants'
 
 const mounted = ref(false)
 const direction = ref('down')
@@ -95,6 +96,7 @@ const handleClick = () => {
             <div>
               <h4 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-5 opacity-40">Social</h4>
               <ul class="space-y-4 text-[15px] font-light text-white/50">
+                <li><a :href="CONTACT_DETAILS.whatsapp" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Youtube</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Linkedin</a></li>
@@ -192,6 +194,7 @@ const handleClick = () => {
             <div class="xl:col-span-2">
               <h4 class="text-white text-[16px] font-medium mb-8">Social</h4>
               <ul class="space-y-5 text-[15px] font-light text-white/40">
+                <li><a :href="CONTACT_DETAILS.whatsapp" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Youtube</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Linkedin</a></li>
