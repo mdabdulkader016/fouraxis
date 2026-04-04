@@ -120,14 +120,14 @@ const handleClick = () => {
                 Let's build something extraordinary together.
               </p>
             </div>
-            <a
-              href="#contact"
+            <router-link
+              to="/contact"
               class="relative group w-full flex items-center justify-center gap-2 py-3.5 bg-[#0066FF] text-white text-[15px] font-medium rounded-2xl transition-all hover:bg-blue-600 active:scale-95 overflow-hidden"
             >
               <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
               <span class="relative z-10">Book a Strategy Call</span>
               <ArrowUpRight class="w-4 h-4 relative z-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            </router-link>
           </div>
 
           <!-- Mobile Bottom Bar -->
@@ -212,8 +212,8 @@ const handleClick = () => {
                 </p>
               </div>
 
-              <a
-                href="#contact"
+              <router-link
+                to="/contact"
                 class="relative group px-8 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl transition-all hover:bg-blue-600 hover:scale-105 hover:-translate-y-1 active:scale-95 overflow-hidden"
               >
                 <!-- Surface Highlight -->
@@ -222,7 +222,7 @@ const handleClick = () => {
                   Book a Strategy Call
                   <Rocket class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </span>
-              </a>
+              </router-link>
             </div>
           </div>
 

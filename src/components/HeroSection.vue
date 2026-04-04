@@ -1,5 +1,6 @@
 <script setup>
 import { Star, ArrowUpRight } from 'lucide-vue-next'
+import { CONTACT_DETAILS } from '@/lib/constants'
 
 const techLogos = [
   { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
@@ -71,7 +72,9 @@ const techLogos = [
       class="flex flex-col sm:flex-row items-center gap-5 z-10"
     >
       <a
-        href="#chat"
+        :href="CONTACT_DETAILS.whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
         class="px-8 py-4 bg-[#171124] border border-white hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:-translate-y-1 text-white text-[16px] font-light rounded-full transition-all flex items-center justify-center gap-3 w-full sm:w-auto"
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -81,14 +84,14 @@ const techLogos = [
         Chat Now
       </a>
 
-      <a
-        href="#quote"
+      <router-link
+        to="/contact"
         class="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-full hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all border border-white flex items-center justify-center gap-2 w-full sm:w-auto relative overflow-hidden"
       >
         <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-full pointer-events-none" />
         <span class="relative z-10 shadow-black drop-shadow-md">Get A Quote</span>
         <ArrowUpRight class="w-5 h-5 text-white relative z-10 shadow-black drop-shadow-md" />
-      </a>
+      </router-link>
     </div>
 
     <!-- Tech Stack Ticker -->

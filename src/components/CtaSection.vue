@@ -47,8 +47,8 @@ import { ArrowRight } from 'lucide-vue-next'
           Ready to take the next step? Join us now and start transforming your vision into reality with expert support.
         </p>
 
-        <a
-          href="#contact"
+        <router-link
+          to="/contact"
           class="relative z-10 px-12 py-5 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 hover:scale-105 hover:-translate-y-1 transition-all inline-flex items-center gap-2 overflow-hidden active:scale-95 group/btn"
         >
           <!-- Surface Highlight -->
@@ -58,7 +58,7 @@ import { ArrowRight } from 'lucide-vue-next'
             Book an Appointment
             <ArrowRight class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
           </span>
-        </a>
+        </router-link>
 
         <!-- Grainy Texture Overlay -->
         <div class="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg%20viewBox=%220%200%20200%20200%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter%20id=%22noiseFilter%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.65%22%20numOctaves=%223%22%20stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')"></div>
