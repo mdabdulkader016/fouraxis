@@ -76,13 +76,13 @@ import { CheckCircle2, Star } from 'lucide-vue-next'
 
           <!-- Actions & Rating -->
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-            <a
-              href="#about-more"
+            <router-link
+              to="/about"
               class="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all flex items-center justify-center relative overflow-hidden"
             >
               <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
               <span class="relative z-10">View About Us</span>
-            </a>
+            </router-link>
 
             <div class="flex flex-col">
               <div class="flex items-center gap-1 mb-1.5">

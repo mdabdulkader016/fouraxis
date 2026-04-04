@@ -7,7 +7,7 @@ const projects = [
     title: "Way Fields",
     year: "2024",
     image: "/portfolio-featured.png",
-    href: "#",
+    href: "/portfolio",
     className: "md:col-span-1",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     title: "Raven Studio",
     year: "2025",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80",
-    href: "#",
+    href: "/portfolio",
     className: "md:col-span-1",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     title: "White Stag",
     year: "2024",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2000&q=80",
-    href: "#",
+    href: "/portfolio",
     className: "md:col-span-2",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     title: "Horizon Analytics",
     year: "2023",
     image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=2000&q=80",
-    href: "#",
+    href: "/portfolio",
     className: "md:col-span-1",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     title: "Nexus CRM",
     year: "2024",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=2000&q=80",
-    href: "#",
+    href: "/portfolio",
     className: "md:col-span-1",
   },
 ];

@@ -153,8 +153,8 @@ onMounted(() => {
 
                 <!-- Action Button -->
                 <div v-if="stage.hasCTA" class="relative z-10">
-                  <a
-                    href="#contact"
+                  <router-link
+                    to="/contact"
                     class="px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all flex items-center justify-center relative overflow-hidden w-fit group/btn active:scale-95"
                   >
                     <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
@@ -162,7 +162,7 @@ onMounted(() => {
                       Book an Appointment
                       <ArrowRight class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </span>
-                  </a>
+                  </router-link>
                 </div>
 
                 <!-- Blur Logo Background Watermark -->

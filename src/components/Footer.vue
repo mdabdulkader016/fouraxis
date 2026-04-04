@@ -97,9 +97,9 @@ const handleClick = () => {
               <h4 class="text-white text-[13px] font-semibold uppercase tracking-widest mb-5 opacity-40">Social</h4>
               <ul class="space-y-4 text-[15px] font-light text-white/50">
                 <li><a :href="CONTACT_DETAILS.whatsapp" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Youtube</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Linkedin</a></li>
+                <li><a :href="CONTACT_DETAILS.instagram" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a></li>
+                <li><a :href="CONTACT_DETAILS.youtube" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Youtube</a></li>
+                <li><a :href="CONTACT_DETAILS.linkedin" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Linkedin</a></li>
               </ul>
             </div>
           </div>
@@ -133,9 +133,9 @@ const handleClick = () => {
           <!-- Mobile Bottom Bar -->
           <div class="w-full pt-4 border-t border-white/5 flex flex-col items-center gap-3">
             <div class="flex items-center gap-6 text-[13px] font-light text-white/40">
-              <a href="#" class="hover:text-white transition-colors">Terms</a>
+              <router-link to="/terms" class="hover:text-white transition-colors">Terms</router-link>
               <div class="w-[1px] h-3 bg-white/10" />
-              <a href="#" class="hover:text-white transition-colors">Privacy</a>
+              <router-link to="/privacy" class="hover:text-white transition-colors">Privacy</router-link>
             </div>
             <p class="text-[13px] font-light text-white/25">
               © 2026 Fouraxis. All rights reserved.
@@ -195,9 +195,9 @@ const handleClick = () => {
               <h4 class="text-white text-[16px] font-medium mb-8">Social</h4>
               <ul class="space-y-5 text-[15px] font-light text-white/40">
                 <li><a :href="CONTACT_DETAILS.whatsapp" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Youtube</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Linkedin</a></li>
+                <li><a :href="CONTACT_DETAILS.instagram" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a></li>
+                <li><a :href="CONTACT_DETAILS.youtube" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Youtube</a></li>
+                <li><a :href="CONTACT_DETAILS.linkedin" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Linkedin</a></li>
               </ul>
             </div>
 
@@ -232,9 +232,9 @@ const handleClick = () => {
               © 2026 Fouraxis. All rights reserved.
             </p>
             <div class="flex items-center gap-8 text-[14px] font-light text-white/90">
-              <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+              <router-link to="/terms" class="hover:text-white transition-colors">Terms & Conditions</router-link>
               <div class="w-[1px] h-4 bg-white/10 hidden md:block" />
-              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              <router-link to="/privacy" class="hover:text-white transition-colors">Privacy Policy</router-link>
             </div>
           </div>
         </div>

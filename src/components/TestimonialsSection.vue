@@ -116,8 +116,8 @@ const brands = [
         </div>
       </div>
 
-      <a
-        href="#contact"
+      <router-link
+        to="/contact"
         class="relative z-10 px-10 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 hover:scale-105 hover:-translate-y-1 transition-all inline-flex items-center gap-2 overflow-hidden active:scale-95 group/btn"
       >
         <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
@@ -125,7 +125,7 @@ const brands = [
           View About Landing
           <ArrowRight class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
         </span>
-      </a>
+      </router-link>
     </div>
 
     <!-- Testimonial Grid -->

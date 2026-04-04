@@ -72,13 +72,13 @@ const tools = [
              We use a world-class technology stack to build high-performance, <br class="hidden md:block" /> accessible, and scalable digital products.
           </p>
 
-          <a
-            href="#contact"
+          <router-link
+            to="/contact"
             class="px-8 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(0,102,255,0.3)] relative overflow-hidden active:scale-95 group inline-flex items-center justify-center"
           >
             <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
             <span class="relative z-10">Build a Product</span>
-          </a>
+          </router-link>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -78,15 +78,15 @@ const sections = [
               </div>
 
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-                 <a
-                      href="#contact"
+                 <router-link
+                      to="/contact"
                       class="px-10 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 transition-all flex items-center justify-center relative overflow-hidden group shadow-lg active:scale-95"
                  >
                       <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
                       <span class="relative z-10 flex items-center gap-2">
                           Book an Appointment <ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </span>
-                 </a>
+                 </router-link>
 
                  <div class="flex flex-col">
                     <div class="flex items-center gap-1 mb-1.5">

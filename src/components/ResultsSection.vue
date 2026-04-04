@@ -91,8 +91,8 @@ const projects = [
         At the core of everything we do lies a commitment to delivering measurable outcomes that drive your success.
       </p>
 
-      <a
-        href="#contact"
+      <router-link
+        to="/contact"
         class="relative z-10 px-8 py-4 bg-[#5E00FF] text-white text-[16px] font-light rounded-2xl hover:bg-[#4b00cc] hover:scale-105 hover:-translate-y-1 transition-all inline-flex items-center gap-2 overflow-hidden active:scale-95"
       >
         <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
@@ -100,7 +100,7 @@ const projects = [
           Book a 15-min call
           <PhoneCall class="w-4 h-4" />
         </span>
-      </a>
+      </router-link>
     </div>
 
     <!-- Infinite Marquee -->

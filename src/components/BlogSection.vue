@@ -94,9 +94,9 @@ const categoriesRow2 = [
             <span v-for="cat in categoriesRow2" :key="cat" class="px-6 py-2.5 rounded-2xl border border-white/[0.08] bg-white/[0.02] text-white/60 text-[14px] font-medium hover:bg-white/[0.05] hover:text-white/90 transition-all cursor-default">
               {{ cat }}
             </span>
-            <a href="#contact" class="px-8 py-2.5 bg-white text-black text-[15px] font-semibold rounded-2xl hover:bg-gray-200 transition-all flex items-center gap-2 active:scale-95 shadow-xl">
+            <router-link to="/contact" class="px-8 py-2.5 bg-white text-black text-[15px] font-semibold rounded-2xl hover:bg-gray-200 transition-all flex items-center gap-2 active:scale-95 shadow-xl">
               Contact Now
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -129,15 +129,15 @@ const categoriesRow2 = [
 
             <div class="flex flex-wrap gap-3.5 mt-auto">
               <template v-if="post.hasButtons">
-                <a href="#contact" class="px-7 py-3.5 bg-[#5E00FF] text-white text-[14px] font-semibold rounded-2xl hover:bg-[#4b00cc] transition-all relative overflow-hidden shadow-[0_0_20px_rgba(94,0,255,0.3)] active:scale-95">
+                <router-link to="/contact" class="px-7 py-3.5 bg-[#5E00FF] text-white text-[14px] font-semibold rounded-2xl hover:bg-[#4b00cc] transition-all relative overflow-hidden shadow-[0_0_20px_rgba(94,0,255,0.3)] active:scale-95">
                   <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
                   <span class="relative z-10">Book an Appointment</span>
-                </a>
+                </router-link>
               </template>
-              <a href="#" class="px-7 py-3.5 bg-white/[0.08] text-white text-[14px] font-semibold rounded-2xl border border-white/[0.1] hover:bg-white/[0.12] transition-colors active:scale-95 flex items-center gap-2 group/read">
+              <router-link to="#" class="px-7 py-3.5 bg-white/[0.08] text-white text-[14px] font-semibold rounded-2xl border border-white/[0.1] hover:bg-white/[0.12] transition-colors active:scale-95 flex items-center gap-2 group/read">
                 Read More
                 <ArrowUpRight class="w-4 h-4 group-hover/read:translate-x-0.5 group-hover/read:-translate-y-0.5 transition-transform" />
-              </a>
+              </router-link>
             </div>
           </div>
           <div class="absolute inset-0 border border-transparent group-hover:border-white/[0.08] transition-colors pointer-events-none rounded-[3rem]" />

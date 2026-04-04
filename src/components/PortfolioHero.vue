@@ -61,13 +61,13 @@
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 300 } }"
           >
-            <a
-              href="#contact"
+            <router-link
+              to="/contact"
               class="px-8 py-4 bg-[#0066FF] text-white text-[16px] font-medium rounded-2xl hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(0,102,255,0.3)] relative overflow-hidden active:scale-95 group inline-flex items-center justify-center"
             >
               <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent rounded-t-2xl pointer-events-none" />
               <span class="relative z-10">Build Your Product</span>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
